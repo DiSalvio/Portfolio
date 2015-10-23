@@ -1,0 +1,10 @@
+class PagesController
+  
+  def home
+  end
+
+  def contact
+  end
+
+    
+end

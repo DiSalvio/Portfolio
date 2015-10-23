@@ -1,0 +1,28 @@
+// Place all the styles related to the pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+h1 {
+  text-align: center;
+}
+h2 {
+  text-align: center;
+}
+
+div {
+  display: block;
+}
+
+.skills {
+  width: 75%;
+  height: 75%;
+  border: 5px solid black;
+  margin: 5px auto 5px auto;
+}
+
+.sites {
+  width: 75%;
+  height: 20%;
+  border: 5px solid black;
+  margin: 5px auto 5px auto;
+}
