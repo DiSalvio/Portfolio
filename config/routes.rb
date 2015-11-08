@@ -2,7 +2,8 @@ Rails.application.routes.draw do
   devise_for :admins, :skip => :registrations
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
-  get 'pages/home' => 'pages#home'
+  get '/home' => 'pages#home'
+  get '/contact' => 'pages#contact'
   # You can have the root of your site routed with "root"
   root 'pages#home'
  
