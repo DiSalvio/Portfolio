@@ -8,3 +8,6 @@
 <div id="github">
   <a target="_blank" href="http://<%= @admin.github %>"><%= @admin.github %></a>
 </div>
+<% unless controller_name == 'blog_posts' %>
+  <%= link_to "Blog", blog_posts_path %>
+<% end %>

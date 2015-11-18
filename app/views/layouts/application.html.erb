@@ -7,9 +7,9 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<% unless @admin.nil? %>
-  <%= render 'layouts/header' %>
-<% end %>
+
+<%= render 'layouts/header' %>
+
 <%= yield %>
 
 </body>

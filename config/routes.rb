@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :blog_posts
   devise_for :admins, :skip => :registrations
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
