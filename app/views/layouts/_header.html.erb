@@ -1,3 +1,6 @@
+<% unless controller_name == 'pages' %>
+  <%= link_to "Home", root_path %>
+<% end %>
 <div id="email">
   <span><%= @admin.email %></span>
 </div>
