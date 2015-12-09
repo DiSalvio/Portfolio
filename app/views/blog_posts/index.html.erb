@@ -1,23 +1,12 @@
 <p id="notice"><%= notice %></p>
 
-<% @blog_posts.each do |blog_post| %>
-
-  <div id="blog_post_<%=blog_post.id%>">
-  <br>
-  <%= link_to "#{blog_post.title}", blog_post %>
-  <br>
-  <%= blog_post.post %>
-  <br>
-  </div>
-
-  <% if current_admin %> 
-   <%= link_to 'Edit', edit_blog_post_path(blog_post) %>
-   <%= link_to 'Destroy', blog_post, method: :delete, data: { confirm: 'Are you sure?' } %>
-  <% end %>
-
-<% end %>
+<%= render @blog_posts %>
  
-<br>
 <% if current_admin %>
-  <%= link_to 'New Blog post', new_blog_post_path %>
+  <%= link_to 'New Blog post', new_blog_post_path, remote: true %>
 <% end %>
+<br>
+<div id='task-form'>
+</div>
+
+

@@ -1,7 +1,10 @@
 class BlogPostsController < ApplicationController
   before_action :authenticate_admin!, only: [:edit, :update, :destroy, :new, :create]
   before_action :set_admin
+  before_action :get_all_blog_posts, only: [:index, :create]
   before_action :set_blog_post, only: [:show, :edit, :update, :destroy]
+  respond_to :html, :js
+  after_action :get_all_blog_posts, only: :create
   # GET /blog_posts
   # GET /blog_posts.json
   def index
@@ -25,17 +28,8 @@ class BlogPostsController < ApplicationController
   # POST /blog_posts
   # POST /blog_posts.json
   def create
-    @blog_post = BlogPost.new(blog_post_params)
+    @blog_post = BlogPost.create(blog_post_params)
 
-    respond_to do |format|
-      if @blog_post.save
-        format.html { redirect_to @blog_post, notice: 'Blog post was successfully created.' }
-        format.json { render :show, status: :created, location: @blog_post }
-      else
-        format.html { render :new }
-        format.json { render json: @blog_post.errors, status: :unprocessable_entity }
-      end
-    end
   end
 
   # PATCH/PUT /blog_posts/1
@@ -71,6 +65,10 @@ class BlogPostsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def blog_post_params
       params[:blog_post].permit(:title, :post)
+    end
+
+    def get_all_blog_posts
+      @blog_posts = BlogPost.all
     end
 
     def set_admin
