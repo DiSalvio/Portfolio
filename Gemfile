@@ -35,6 +35,8 @@ group :development, :test do
   gem 'pry'
   gem 'rspec-rails'
   gem 'capybara'
+  gem 'better_errors'
+  gem 'shoulda-matchers'
 end
 
 group :development do
