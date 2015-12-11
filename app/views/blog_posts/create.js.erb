@@ -1,2 +1,4 @@
-$('#tasks').html("<%= j (render @blog_posts) %>");
 $('#task-form').slideUp(350);
+$('#blog_posts').append('<%= j (render @blog_post) %>')
+
+$('#new_blog_post').slideDown(350);

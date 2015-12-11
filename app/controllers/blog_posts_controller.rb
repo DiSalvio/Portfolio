@@ -2,9 +2,7 @@ class BlogPostsController < ApplicationController
   before_action :authenticate_admin!, only: [:edit, :update, :destroy, :new, :create]
   before_action :set_admin
   before_action :get_all_blog_posts, only: [:index, :create]
-  before_action :set_blog_post, only: [:show, :edit, :update, :destroy]
-  respond_to :html, :js
-  after_action :get_all_blog_posts, only: :create
+  before_action :set_blog_post, only: [:show, :edit, :update, :destroy]  
   # GET /blog_posts
   # GET /blog_posts.json
   def index
@@ -29,7 +27,16 @@ class BlogPostsController < ApplicationController
   # POST /blog_posts.json
   def create
     @blog_post = BlogPost.create(blog_post_params)
-
+    
+      respond_to do |format|
+        if @blog_post.valid?
+          format.html { redirect_to @blog_post }
+          format.js
+        else
+	  format.html { redirect_to :new }
+	  format.js
+	end
+      end
   end
 
   # PATCH/PUT /blog_posts/1
@@ -39,9 +46,11 @@ class BlogPostsController < ApplicationController
       if @blog_post.update(blog_post_params)
         format.html { redirect_to @blog_post, notice: 'Blog post was successfully updated.' }
         format.json { render :show, status: :ok, location: @blog_post }
+	format.js
       else
         format.html { render :edit }
         format.json { render json: @blog_post.errors, status: :unprocessable_entity }
+	format.js
       end
     end
   end
@@ -53,6 +62,7 @@ class BlogPostsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to blog_posts_url, notice: 'Blog post was successfully destroyed.' }
       format.json { head :no_content }
+      format.js
     end
   end
 
