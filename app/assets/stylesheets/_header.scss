@@ -1,0 +1,58 @@
+#header {
+  float: middle;
+  width: 70%;
+  margin: 0 15% 0 15%;
+  height: 10%;
+  padding: 1%;
+  display: inline-block;
+}
+
+#name {
+  width: 33.3%;
+  text-align: center;
+  float: middle;
+  display: inline-block;
+}
+
+#header_left {
+  width: 33.3%;
+  height: 100%;
+  float: left;
+  display: inline-block;
+}
+
+#email,
+#phone_number,
+#github,
+#blog_link {
+  border: 1px solid green;
+  display: inline-block;
+  width: 49%;
+  height: 100%;
+}
+
+#header_right {
+  width: 33.3%;
+  height: 100%;
+  display: inline-block;
+  float: right;
+}
+
+
+
+
+#github {
+  float: left;
+}
+
+#blog_link {
+  float: right;
+}
+
+#email {
+  float: left;
+}
+
+#phone_number {
+  float: right;
+}

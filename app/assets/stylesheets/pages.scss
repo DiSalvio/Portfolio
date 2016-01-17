@@ -1,32 +1,73 @@
 // Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
-h1 {
-  text-align: center;
-}
-h2 {
-  text-align: center;
+html,
+body {
+  height: 100%;
 }
 
+h1,
+h2,
+h3,
+h4,
 div {
-  display: block;
+  text-align: center;
+}
+
+h2 {
+  padding: 0.5%;
+  margin: auto 0px;
+}
+
+h4 {
+  padding: 0.5%;
+  margin: auto 0px;
+}
+
+ul { 
+  margin: auto 0px;
+}
+
+li {
+  text-align: left;
 }
 
 .skills,
 .interests,
 .hobbies {
-  padding: 2.5%;
-  width: 75%;
-  height: 75%;
+  padding: 0.5%;
+  margin: 5px auto;
+  height: 30%;
+  width: 80%;
+  border: 5px solid black;  
+}
+
+#main_dev_tools {
+  float: left;
+}
+
+#familiar_with {
+  float: middle;
+  margin: auto auto;
+} 
+
+#testing_tools {
+  float: right;
+}
+
+#main_dev_tools,
+#familiar_with,
+#testing_tools {
+  display: inline-block;
+  width: 30%;
+  height: 80%;
   border: 5px solid black;
-  margin: 5px auto 5px auto;
 }
 
 .sites {
-  padding: 2.5%;
-  width: 75%;
-  height: 20%;
+  padding: 0.5%;
+  width: 80%;
+  height: 10%;
   border: 5px solid black;
   margin: 5px auto 5px auto;
 }
