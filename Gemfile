@@ -23,18 +23,21 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
+gem 'simple_form'
+gem 'jquery-validation-rails'
 
-# Use Unicorn as the app server
-# gem 'unicorn'
 
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
+
+
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'pry'
   gem 'rspec-rails'
   gem 'capybara'
+  gem 'better_errors'
+  gem 'shoulda-matchers'
 end
 
 group :development do

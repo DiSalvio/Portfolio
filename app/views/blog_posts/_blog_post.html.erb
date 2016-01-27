@@ -1,0 +1,15 @@
+
+
+<div id="blog_post_<%=blog_post.id%>">
+  <br>
+  <%= link_to "#{blog_post.title}", blog_post %>
+  <br>
+  <%= blog_post.post %>
+  <br>
+
+
+  <% if current_admin %> 
+   <%= link_to 'Edit', edit_blog_post_path(blog_post), remote: true %>
+   <%= link_to 'Destroy', blog_post, method: :delete, data: { confirm: 'Are you sure?' }, remote: true %>
+  <% end %>
+</div>

@@ -1,0 +1,5 @@
+
+$('#task-form').slideUp(350);
+$('#blog_post_<%= @blog_post.id %>').html('<%= j (render @blog_post) %>').show();
+$('#task-form').append('<%= j @blog_post.errors.any? %>');
+$('#new_blog_post').slideDown(350);

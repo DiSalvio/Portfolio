@@ -3,14 +3,15 @@
 <head>
   <title>Portfolio</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>  
   <%= csrf_meta_tags %>
 </head>
 <body>
-<% unless @admin.nil? %>
-  <%= render 'layouts/header' %>
-<% end %>
+<head>
+  <% if controller_name == 'pages' || controller_name == 'blog_posts' %>
+    <%= render 'layouts/header' %>
+  <% end %>
+</head>
 <%= yield %>
-
 </body>
 </html>
