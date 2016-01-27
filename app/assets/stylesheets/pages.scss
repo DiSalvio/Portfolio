@@ -6,7 +6,7 @@ body {
   height: 100%;
 }
 
-h1,
+  
 h2,
 h3,
 h4,
@@ -21,7 +21,7 @@ h2 {
 
 h4 {
   padding: 0.5%;
-  margin: auto 0px;
+  margin: auto auto;
 }
 
 ul { 
@@ -32,6 +32,7 @@ li {
   text-align: left;
 }
 
+
 .skills,
 .interests,
 .hobbies {
@@ -40,6 +41,15 @@ li {
   height: 30%;
   width: 80%;
   border: 5px solid black;  
+}
+
+.interests,
+.hobbies {
+  height: 20%;
+}
+
+.skills {
+ margin-top: 0px;
 }
 
 #main_dev_tools {

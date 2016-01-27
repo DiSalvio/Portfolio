@@ -1,28 +1,26 @@
 <div id="header">
+
   <div id="header_left">
 
-    <% unless controller_name == 'pages' %>
+    <% if controller_name == 'blog_posts' %>
       <%= link_to "Home", root_path %>
     <% end %>
-    <div id="email">
-      <span><%= @admin.email %></span>
-    </div>
-    <div id="phone_number">
-      <span><%= @admin.phone_number %></span>
-    </div>
 
   </div>
+
   <div id="name">
     <h1><%= @admin.name %></h1>
+      <span id="email"><%= @admin.email %></span> 
+      <a id="github" target="_blank" href="http://<%= @admin.github %>"><%= @admin.github %></a>
+      <span id="phone_number"><%= @admin.phone_number %></span>
   </div>
   <div id="header_right">
-    <div id="github">
-      <a target="_blank" href="http://<%= @admin.github %>"><%= @admin.github %></a>
-    </div>
+
     <div id="blog_link">
-      <% unless controller_name == 'blog_posts' %>
+      <% if controller_name == 'pages' %>
         <%= link_to "Blog", blog_posts_path %>
       <% end %>
     </div>
+
   </div>
 </div>

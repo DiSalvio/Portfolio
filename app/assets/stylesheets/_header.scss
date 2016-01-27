@@ -1,3 +1,8 @@
+body {
+  margin: 0px;
+}
+
+
 #header {
   float: middle;
   width: 70%;
@@ -5,17 +10,28 @@
   height: 10%;
   padding: 1%;
   display: inline-block;
+    
+  h1 {
+    margin: 0 0;
+  }
 }
 
 #name {
-  width: 33.3%;
+  width: 50%;
+  height: 100%;
   text-align: center;
   float: middle;
   display: inline-block;
+  margin: 0 0;
+
+  h1 {
+    height: 40%;
+  }
 }
 
+
 #header_left {
-  width: 33.3%;
+  width: 20%;
   height: 100%;
   float: left;
   display: inline-block;
@@ -23,36 +39,28 @@
 
 #email,
 #phone_number,
-#github,
+#github {
+  display: inline-block;
+  float: middle;
+  width: 70%;
+  height: 20%;
+  text-align: center;
+}
+
 #blog_link {
   border: 1px solid green;
   display: inline-block;
-  width: 49%;
-  height: 100%;
+  width: 100%;
+  height: 45%;
+  padding: 1%;
+  margin: 1%;
 }
 
 #header_right {
-  width: 33.3%;
+  width: 20%;
   height: 100%;
   display: inline-block;
   float: right;
 }
 
 
-
-
-#github {
-  float: left;
-}
-
-#blog_link {
-  float: right;
-}
-
-#email {
-  float: left;
-}
-
-#phone_number {
-  float: right;
-}

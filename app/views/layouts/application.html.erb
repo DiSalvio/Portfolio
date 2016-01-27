@@ -8,10 +8,10 @@
 </head>
 <body>
 <head>
-  <%= render 'layouts/header' %>
+  <% if controller_name == 'pages' || controller_name == 'blog_posts' %>
+    <%= render 'layouts/header' %>
+  <% end %>
 </head>
-
 <%= yield %>
-
 </body>
 </html>

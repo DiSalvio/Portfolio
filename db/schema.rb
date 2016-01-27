@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 20151118042843) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
-    t.string   "unlock_token"
+    t.integer  "failed_attempts",    default: 0,  null: false
     t.datetime "locked_at"
     t.string   "name"
     t.string   "phone_number"
@@ -31,7 +31,6 @@ ActiveRecord::Schema.define(version: 20151118042843) do
   end
 
   add_index "admins", ["email"], name: "index_admins_on_email", unique: true
-  add_index "admins", ["unlock_token"], name: "index_admins_on_unlock_token", unique: true
 
   create_table "blog_posts", force: :cascade do |t|
     t.string   "title"

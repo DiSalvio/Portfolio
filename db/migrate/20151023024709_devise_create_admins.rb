@@ -13,7 +13,7 @@ class DeviseCreateAdmins < ActiveRecord::Migration
       t.string   :last_sign_in_ip
 
       # Lockable
-      t.string   :unlock_token # Only if unlock strategy is :email or :both
+      t.integer :failed_attempts, default: 0, null: false
       t.datetime :locked_at
       
       # User contact info
@@ -25,6 +25,5 @@ class DeviseCreateAdmins < ActiveRecord::Migration
     end
 
     add_index :admins, :email,                unique: true
-    add_index :admins, :unlock_token,         unique: true
   end
 end
