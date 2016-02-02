@@ -12,7 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require jquery.validate
-//= require jquery.validate.additional-methods
 //= require turbolinks
+//= require rails.validations
+//= require rails.validations.simple_form
 //= require_tree .

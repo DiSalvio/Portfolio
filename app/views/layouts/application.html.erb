@@ -7,11 +7,14 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<head>
-  <% if controller_name == 'pages' || controller_name == 'blog_posts' %>
-    <%= render 'layouts/header' %>
+  <head>
+    <% if controller_name == 'pages' || controller_name == 'blog_posts' %>
+      <%= render 'layouts/header' %>
+    <% end %>
+  </head>
+  <% flash.each do |name, msg| %>
+    <%= content_tag :div, msg %>
   <% end %>
-</head>
 <%= yield %>
 </body>
 </html>

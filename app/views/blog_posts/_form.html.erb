@@ -1,12 +1,15 @@
-<%= simple_form_for @blog_post, remote: true do |f| %>
+<%= simple_form_for @blog_post, remote: true, :validate => { :presence => true, :uniqueness => false } do |f| %>
+  <ul class="errors">
   <%= f.error_notification %>
+  </ul>
 
   <div class="form-inputs">
-    <%= f.input :title %>
-    <%= f.input :post %>
+    <%= f.input :title, :validate => { :presence => true, :uniqueness => false } %>
+    <%= f.input :post, :validate => { :presence => true, :uniqueness => false } %>
   </div>
 
   <div class="form-actions">
     <%= f.button :submit %>
+    <%= link_to "Cancel", blog_posts_cancel_path, remote: true %>
   </div>
 <% end %>

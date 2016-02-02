@@ -6,6 +6,10 @@
       <%= link_to "Home", root_path %>
     <% end %>
 
+    <% if current_admin != nil && controller_name == 'pages' %>
+      <%= link_to "Log Out", destroy_admin_session_path, method: :delete %>
+    <% end %>
+
   </div>
 
   <div id="name">
@@ -21,6 +25,10 @@
         <%= link_to "Blog", blog_posts_path %>
       <% end %>
     </div>
+    
+    <% if current_admin != nil && controller_name == 'blog_posts' %>
+      <%= link_to "Log Out", destroy_admin_session_path, method: :delete %>
+    <% end %>
 
   </div>
 </div>

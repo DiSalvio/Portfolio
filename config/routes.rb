@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  
+  get 'blog_posts/cancel' => 'blog_posts#cancel'
   resources :blog_posts
   devise_for :admins, :skip => :registrations
   # The priority is based upon order of creation: first created -> highest priority.
