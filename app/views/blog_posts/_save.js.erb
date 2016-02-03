@@ -5,6 +5,6 @@ $("ul.errors").html("")
   <% end %>
 <% else %>
   $('#blog_posts').append('<%= j (render @blog_post) %>')
-  $('#task-form').slideUp(350);
+  $('#blog_post_form').slideUp(350);
   $('#new_blog_post').slideDown(350);
 <% end %>

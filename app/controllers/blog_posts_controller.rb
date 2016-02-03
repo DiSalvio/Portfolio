@@ -1,7 +1,7 @@
 class BlogPostsController < ApplicationController
   before_action :authenticate_admin!, only: [:edit, :update, :destroy, :new, :create]
   before_action :set_admin
-  before_action :get_all_blog_posts, only: [:index, :create]
+  before_action :get_all_blog_posts, only: [:index, :create, :cancel]
   before_action :set_blog_post, only: [:show, :edit, :update, :destroy]  
   # GET /blog_posts
   # GET /blog_posts.json

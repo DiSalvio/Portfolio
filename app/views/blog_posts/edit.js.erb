@@ -1,4 +1,4 @@
 $('#blog_post_<%= @blog_post.id%>').hide();
-$('#task-form').html("<%= j (render 'form') %>");
-$('#task-form').slideDown(350);
+$('#blog_post_<%= @blog_post.id %>').html("<%= j (render 'form') %>");
+$('#blog_post_<%= @blog_post.id %>').show(350);
 $('#new_blog_post').hide();

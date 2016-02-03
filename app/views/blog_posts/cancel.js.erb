@@ -1,2 +1,5 @@
-$('#task-form').slideUp(350);
+
+$('#blog_post_form').hide(350);
+$('#blog_posts').html("");
+$('#blog_posts').html('<%= j (render @blog_posts) %>');
 $('#new_blog_post').slideDown(350);
