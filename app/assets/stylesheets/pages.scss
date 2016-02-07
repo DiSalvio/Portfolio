@@ -33,9 +33,8 @@ li {
 }
 
 
-.skills,
-.interests,
-.hobbies {
+.tools,
+.about_me {
   padding: 0.5%;
   margin: 5px auto;
   height: 30%;
@@ -43,38 +42,34 @@ li {
   border: 5px solid black;  
 }
 
-.interests,
-.hobbies {
-  height: 20%;
+
+.about_me {
+  height: 30%;
 }
 
-.skills {
- margin-top: 0px;
+.tools {
+  margin-top: 0px;
+  #dev_tools,
+  #testing_tools,
+  #research {
+    display: inline-block;
+    width: 30%;
+    height: 80%;
+    border: 5px solid black;
+  }
+  #dev_tools {  
+    float: left;
+  }
+  #testing_tools {
+    float: middle;
+  }  
+  #research {
+    float: right;
+    margin: auto auto;
+  } 
 }
 
-#main_dev_tools {
-  float: left;
-}
-
-#familiar_with {
-  float: middle;
-  margin: auto auto;
-} 
-
-#testing_tools {
-  float: right;
-}
-
-#main_dev_tools,
-#familiar_with,
-#testing_tools {
-  display: inline-block;
-  width: 30%;
-  height: 80%;
-  border: 5px solid black;
-}
-
-.sites {
+.projects {
   padding: 0.5%;
   width: 80%;
   height: 10%;
