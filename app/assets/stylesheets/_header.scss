@@ -7,60 +7,89 @@ body {
   float: middle;
   width: 70%;
   margin: 0 15% 0 15%;
-  height: 10%;
-  padding: 1%;
+  height: 15%;
+  padding: .5%;
   display: inline-block;
-    
+
   h1 {
     margin: 0 0;
   }
-}
 
-#name {
-  width: 50%;
-  height: 100%;
-  text-align: center;
-  float: middle;
-  display: inline-block;
-  margin: 0 0;
+  #header_left {
+    width: 25%;
+    height: 100%;
+    float: left;
+    display: inline-block;
 
-  h1 {
-    height: 40%;
+      }
+
+  
+  #header_middle {
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    float: middle;
+    display: inline-block;
+    margin: 0 0;
+
+      h1 {
+        height: 40%;
+      }
+  
+      #email,
+      #phone_number,
+      #github {
+        display: inline-block;
+        float: middle;
+        width: 70%;
+        height: 20%;
+        text-align: center;
+      }
+    }
+
+
+  #header_right {
+    width: 25%;
+    height: 100%;
+    display: inline-block;
+    float: right;
+
+    
+    #blog_link {
+      float: middle;
+      text-align: center;
+      display: inline-block;
+      width: 100%;
+      height: 50%;
+      padding: 1%;
+      margin: 15% 0% 15% 0%;
+      a {
+        text-decoration: none;
+        font-size: 22px;
+	color: black;
+      }
+    }  
+    #blog_link a:hover {
+      text-decoration: underline;
+    }
+
+    #portfolio {
+      width: 100%;
+      height: 50%;
+      float: middle;
+      padding: 1%;
+      margin: 15% 0% 15% 0%;
+      a {
+        width: 100%;
+	height: 70%;
+        text-decoration: none;
+        font-size: 22px;
+        color: black;
+      }
+      a:hover {
+      text-decoration: underline;
+      color: black;
+      }
+    }
   }
 }
-
-
-#header_left {
-  width: 20%;
-  height: 100%;
-  float: left;
-  display: inline-block;
-}
-
-#email,
-#phone_number,
-#github {
-  display: inline-block;
-  float: middle;
-  width: 70%;
-  height: 20%;
-  text-align: center;
-}
-
-#blog_link {
-  border: 1px solid green;
-  display: inline-block;
-  width: 100%;
-  height: 45%;
-  padding: 1%;
-  margin: 1%;
-}
-
-#header_right {
-  width: 20%;
-  height: 100%;
-  display: inline-block;
-  float: right;
-}
-
-

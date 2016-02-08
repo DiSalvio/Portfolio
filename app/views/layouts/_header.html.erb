@@ -1,31 +1,43 @@
 <div id="header">
 
   <div id="header_left">
+    
+   <%= image_tag "StephenDiSalvio.jpg" %>
 
-    <% if controller_name == 'blog_posts' %>
-      <%= link_to "Home", root_path %>
-    <% end %>
-
+    
     <% if current_admin != nil && controller_name == 'pages' %>
       <%= link_to "Log Out", destroy_admin_session_path, method: :delete %>
     <% end %>
 
   </div>
 
-  <div id="name">
-    <h1><%= @admin.name %></h1>
+  <div id="header_middle">
+    <% if controller_name == 'pages' %>
+      <h1><%= @admin.name %></h1>
       <span id="email"><%= @admin.email %></span> 
       <a id="github" target="_blank" href="http://<%= @admin.github %>"><%= @admin.github %></a>
       <span id="phone_number"><%= @admin.phone_number %></span>
-  </div>
-  <div id="header_right">
+    <% end %>
 
-    <div id="blog_link">
-      <% if controller_name == 'pages' %>
-        <%= link_to "Blog", blog_posts_path %>
-      <% end %>
-    </div>
+    <% if controller_name == 'blog_posts' %>
+      <h1>Blog</h1>
+    <% end %>
+  </div>
+
+  <div id="header_right">
     
+    <% if controller_name == 'pages' %>
+      <div id="blog_link">
+        <%= link_to "Blog", blog_posts_path %>
+      </div>
+    <% end %>
+
+    <% if controller_name == 'blog_posts' %>
+      <div id="portfolio">
+        <%= link_to "Portfolio", root_path %>
+      </div>
+    <% end %>
+
     <% if current_admin != nil && controller_name == 'blog_posts' %>
       <%= link_to "Log Out", destroy_admin_session_path, method: :delete %>
     <% end %>

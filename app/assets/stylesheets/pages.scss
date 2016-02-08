@@ -6,22 +6,24 @@ body {
   height: 100%;
 }
 
+div {
+  display: inline-block;
+}
   
 h2,
 h3,
-h4,
 div {
   text-align: center;
 }
 
 h2 {
+  margin: 0 0;
   padding: 0.5%;
-  margin: auto 0px;
 }
 
 h4 {
+  text-align: left;
   padding: 0.5%;
-  margin: auto auto;
 }
 
 ul { 
@@ -32,19 +34,17 @@ li {
   text-align: left;
 }
 
-
 .tools,
 .about_me {
   padding: 0.5%;
-  margin: 5px auto;
+  margin: 0% 15% 0% 15%;
   height: 30%;
-  width: 80%;
-  border: 5px solid black;  
+  width: 70%;
+  border-top: 5px solid black;  
 }
 
-
 .about_me {
-  height: 30%;
+  height: 35%;
 }
 
 .tools {
@@ -53,11 +53,15 @@ li {
   #testing_tools,
   #research {
     display: inline-block;
-    width: 30%;
+    width: 25%;
     height: 80%;
-    border: 5px solid black;
+    margin-left: 5%;
+    h4 {
+      margin-bottom: 5%;
+    }
   }
-  #dev_tools {  
+
+  #dev_tools {
     float: left;
   }
   #testing_tools {
@@ -65,14 +69,24 @@ li {
   }  
   #research {
     float: right;
-    margin: auto auto;
   } 
 }
 
 .projects {
   padding: 0.5%;
-  width: 80%;
-  height: 10%;
-  border: 5px solid black;
-  margin: 5px auto 5px auto;
+  width: 70%;
+  height: 15%;
+  border-top: 5px solid black;
+  margin: 0% 15% 0% 15%;
+  .deployed {
+    width: 40%;
+    height: 100%;
+    float: left;
+
+  }
+  .coming_soon {
+    width: 40%;
+    height: 100%;
+    float: right;
+  }
 }
