@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <h3><%= @blog_post.title %></h3>
-<p><%= @blog_post.post %></p>
+<p id=content><%= @blog_post.post %></p>
 
 <% if current_admin %>
   <%= link_to 'Edit', edit_blog_post_path(@blog_post) %> |

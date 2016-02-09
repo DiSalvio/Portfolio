@@ -1,0 +1,72 @@
+@media (max-width: 750px) {
+  h1 {
+    font-size: 1.75em;
+  }
+  h2 {
+    font-size: 1.4em;
+  }
+  h4 {
+    font-size: 0.9em;
+  }
+  li {
+    font-size: .9em;
+  }
+  p {
+    font-size: .85em;
+  }
+ #header_middle {
+    a,
+    span {
+      font-size: 0.9em;
+    }
+  }
+  #header,
+  .tools,
+  .about_me,
+  .projects {
+    width: 100% !important;
+    margin: 0% !important;
+    padding: 0.5% !important;
+  }
+  .tools {
+    height: 25% !important;
+  }
+  .about_me {
+    height: 40% !important;
+  }
+}
+
+@media (max-width: 625px) {
+  h1 {
+    font-size: 1.5em;
+  }
+  h2 {
+    font-size: 1.25em;
+  }
+  li {
+    font-size: 0.85em;
+  }
+
+  #header_middle { 
+    a, span {
+      font-size: 0.85em;
+    }
+  }
+}
+
+@media (max-width: 535px) {
+  h1 {
+    font-size: 1.35em;
+  }
+  h4 {
+    font-size: .75em;
+  }
+  li {
+    font-size: 0.75em;
+  }
+  #content,
+  #blog_posts {
+    width: 95%;
+    margin: 1% 2.5%;
+  }
+}

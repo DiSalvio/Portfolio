@@ -79,14 +79,18 @@ li {
   border-top: 5px solid black;
   margin: 0% 15% 0% 15%;
   .deployed {
-    width: 40%;
+    width: 50%;
     height: 100%;
     float: left;
 
   }
   .coming_soon {
-    width: 40%;
+    width: 50%;
     height: 100%;
     float: right;
+  }
+
+  h4 {
+    margin-left: 5%;
   }
 }
