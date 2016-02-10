@@ -27,8 +27,11 @@ gem 'simple_form'
 gem 'client_side_validations'
 gem 'client_side_validations-simple_form'
 
-
-
+group :production do
+  gem 'unicorn'
+  gem 'pg'
+  gem 'rails_12factor'
+end
 
 
 
@@ -49,3 +52,4 @@ group :development do
   gem 'spring'
 end
 
+ruby "2.2.1"
