@@ -8,7 +8,35 @@
   margin: 1% 15%;
 }
 
+.errors {
+  color: red;
+  list-style: none;
+  width: 25%;
+  margin: 1% 35% 1% 40%;
+}
+
+.blog_post_title {
+  width: 25%;
+  margin: 1% 37.5%;
+  #blog_post_title {
+    width: 100%;
+  }
+}
+
+.blog_post_post {
+  width: 25%;
+  margin: 1% 37.5%;
+  #blog_post_post {
+    width: 100%;
+  }
+}
+
+
+#form-inputs {
+  display: block;
+}
+
 body {
-  background-image: url("symphony.png");
+  background-image: url(asset-path('symphony.png'));
   background-repeat: repeat;
 }

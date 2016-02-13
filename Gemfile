@@ -25,6 +25,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'simple_form'
 gem 'client_side_validations'
 gem 'client_side_validations-simple_form'
+gem 'font-awesome-sass', '~> 4.5.0'
 
 group :production do
   gem 'unicorn'

@@ -6,9 +6,6 @@ body {
   height: 100%;
 }
 
-div {
-  display: inline-block;
-}
   
 h2,
 h3,
@@ -38,9 +35,8 @@ li {
 .about_me {
   padding: 0.5%;
   margin: 0% 15% 0% 15%;
-  height: 30%;
   width: 70%;
-  border-top: 5px solid black;  
+  border-top: 2.5px ridge gray;  
 }
 
 .about_me {
@@ -48,6 +44,7 @@ li {
 }
 
 .tools {
+  height: 25%;
   margin-top: 0px;
   #dev_tools,
   #testing_tools,
@@ -76,21 +73,25 @@ li {
   padding: 0.5%;
   width: 70%;
   height: 15%;
-  border-top: 5px solid black;
+  border-top: 2.5px ridge gray;
   margin: 0% 15% 0% 15%;
   .deployed {
-    width: 50%;
+    width: 30%;
     height: 100%;
     float: left;
-
+    margin-left: 20%;
   }
   .coming_soon {
-    width: 50%;
+    width: 35%;
     height: 100%;
     float: right;
+    margin-left: 15%;
   }
 
   h4 {
     margin-left: 5%;
+    margin-top: 0%;
+    margin-bottom: 2.5%;
+    margin-right: 0%;
   }
 }
