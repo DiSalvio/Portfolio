@@ -1,4 +1,14 @@
-@media (max-width: 750px) {
+@media (max-width: 1080px) {
+  .about_me {
+    p {
+      font-size: 0.9em;
+    }
+  }
+
+}
+
+
+@media (max-width: 845px) {
   h1 {
     font-size: 1.75em;
   }
@@ -9,10 +19,10 @@
     font-size: 0.9em;
   }
   li {
-    font-size: .9em;
+    font-size: 0.9em;
   }
-  p {
-    font-size: .85em;
+  .about_me p {
+    font-size: 0.95em;
   }
  #header_middle {
     a,
@@ -32,7 +42,8 @@
     height: 25% !important;
   }
   .about_me {
-    height: 40% !important;
+    height: 35% !important;
+    margin-bottom: 0% !important;
   }
 }
 
@@ -52,6 +63,12 @@
       font-size: 0.85em;
     }
   }
+  .about_me {
+    margin-bottom: 0.5%;
+    p {
+      font-size: 0.85em;
+    }
+  }
 }
 
 @media (max-width: 535px) {
@@ -59,7 +76,7 @@
     font-size: 1.35em;
   }
   h4 {
-    font-size: .75em;
+    font-size: 0.75em;
   }
   li {
     font-size: 0.75em;
@@ -68,5 +85,8 @@
   #blog_posts {
     width: 95%;
     margin: 1% 2.5%;
+  }
+  .about_me {
+    height: 42.5% !important;
   }
 }

@@ -6,7 +6,6 @@ class BlogPostsController < ApplicationController
   # GET /blog_posts
   # GET /blog_posts.json
   def index
-    @blog_posts = BlogPost.all
   end
 
   # GET /blog_posts/1
@@ -84,7 +83,7 @@ class BlogPostsController < ApplicationController
     end
 
     def get_all_blog_posts
-      @blog_posts = BlogPost.all
+      @blog_posts = BlogPost.order(created_at: :desc)
     end
 
     def set_admin

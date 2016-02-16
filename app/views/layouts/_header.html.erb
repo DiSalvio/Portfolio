@@ -5,7 +5,7 @@
    <%= image_tag "StephenDiSalvio.jpg" %>
 
     
-    <% if current_admin != nil && controller_name == 'pages' %>
+    <% if current_admin != nil && (controller_name == 'pages' || controller_name == 'blog_posts') %>
       <%= link_to "Log Out", destroy_admin_session_path, method: :delete %>
     <% end %>
 
@@ -36,10 +36,6 @@
       <div id="portfolio">
         <%= link_to "Portfolio", root_path %>
       </div>
-    <% end %>
-
-    <% if current_admin != nil && controller_name == 'blog_posts' %>
-      <%= link_to "Log Out", destroy_admin_session_path, method: :delete %>
     <% end %>
 
   </div>
