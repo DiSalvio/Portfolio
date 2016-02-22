@@ -1,7 +1,7 @@
 class BlogPostsController < ApplicationController
   before_action :authenticate_admin!, only: [:edit, :update, :destroy, :new, :create]
   before_action :set_admin
-  before_action :get_all_blog_posts, only: [:index, :create, :cancel]
+  before_action :get_all_blog_posts, only: [:index, :create, :cancel, :update]
   before_action :set_blog_post, only: [:show, :edit, :update, :destroy]  
   # GET /blog_posts
   # GET /blog_posts.json
@@ -79,7 +79,7 @@ class BlogPostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def blog_post_params
-      params[:blog_post].permit(:title, :post)
+      params[:blog_post].permit(:title, :content)
     end
 
     def get_all_blog_posts

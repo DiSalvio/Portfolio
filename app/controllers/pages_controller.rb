@@ -5,7 +5,6 @@ class PagesController < ApplicationController
     get_admin
   end
 
-
   private
 
   def get_admin

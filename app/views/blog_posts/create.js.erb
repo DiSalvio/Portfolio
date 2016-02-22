@@ -1,1 +1,10 @@
-<%= render "save" %>
+$("ul.errors").html("")
+<% if @blog_post.errors.any? %>
+  <% @blog_post.errors.full_messages.each do |message| %>
+    $("ul.errors").append($("<li />").html("<%= message.html_safe %>"))
+  <% end %>
+<% else %>
+  $('#blog_posts').prepend('<%= j (render @blog_post) %>')
+  $('#blog_post_form').slideUp(350)
+  $('#new_blog_post').slideDown(350)
+<% end %>

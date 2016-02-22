@@ -1,10 +1,12 @@
 <p id="notice"><%= notice %></p>
+
 <% if current_admin %>
   <%= link_to 'New Blog post', new_blog_post_path, remote: true, id: 'new_blog_post' %>
 <% end %>
+
 <div id='blog_post_form'>
 </div>
+
 <div id="blog_posts">
-<%= render @blog_posts %>
+  <%= render @blog_posts %>
 </div>
-<br>

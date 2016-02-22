@@ -3,7 +3,7 @@ class CreateBlogPosts < ActiveRecord::Migration
     create_table :blog_posts do |t|
       
       t.string :title
-      t.text :post
+      t.text :content
 
       t.timestamps null: false
     end

@@ -4,13 +4,12 @@ body {
 
 
 #header {
-  float: middle;
   width: 70%;
   margin: 0 15% 0 15%;
   height: 15%;
   padding: .5%;
   display: inline-block;
-
+  border-bottom: 2.5px ridge gray; 
   h1 {
     margin: 0 0;
   }
@@ -28,7 +27,6 @@ body {
     width: 50%;
     height: 100%;
     text-align: center;
-    float: middle;
     display: inline-block;
     margin: 0 0;
 
@@ -40,7 +38,6 @@ body {
       #phone_number,
       #github {
         display: inline-block;
-        float: middle;
         width: 70%;
         height: 20%;
         text-align: center;
@@ -59,7 +56,6 @@ body {
 
     
     #blog_link {
-      float: middle;
       text-align: center;
       display: inline-block;
       width: 100%;
@@ -79,7 +75,6 @@ body {
     #portfolio {
       width: 100%;
       height: 50%;
-      float: middle;
       padding: 1%;
       margin: 15% 0% 15% 0%;
       a {

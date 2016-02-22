@@ -12,7 +12,7 @@
   </div>
 
   <div id="header_middle">
-    <% if controller_name == 'pages' %>
+    <% if controller_name == 'pages'|| controller_name == 'projects' %>
       <h1><%= @admin.name %></h1>
       <span id="email"><%= @admin.email %></span> 
       <a id="github" target="_blank" href="http://<%= @admin.github %>"><%= @admin.github %></a>
@@ -22,6 +22,7 @@
     <% if controller_name == 'blog_posts' %>
       <h1>Blog</h1>
     <% end %>
+
   </div>
 
   <div id="header_right">
@@ -32,7 +33,7 @@
       </div>
     <% end %>
 
-    <% if controller_name == 'blog_posts' %>
+    <% if controller_name == 'blog_posts' || controller_name == 'projects' %>
       <div id="portfolio">
         <%= link_to "Portfolio", root_path %>
       </div>

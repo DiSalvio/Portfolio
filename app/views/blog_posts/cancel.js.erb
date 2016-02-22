@@ -1,5 +1,5 @@
-
-$('#blog_post_form').hide(350);
+$('#new_blog_post').slideDown(350);
+$('#blog_post_form').html("").insertAfter('#new_blog_post');
 $('#blog_posts').html("");
 $('#blog_posts').html('<%= j (render @blog_posts) %>');
-$('#new_blog_post').slideDown(350);
+

@@ -9,7 +9,10 @@ Rails.application.routes.draw do
   get '/contact' => 'pages#contact'
   # You can have the root of your site routed with "root"
   root 'pages#home'
- 
+  
+  get 'projects/portfolio' => 'projects#portfolio'
+  get 'projects/bqbl' => 'projects#bqbl'
+  get 'projects/differentia' => 'projects#differentia'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

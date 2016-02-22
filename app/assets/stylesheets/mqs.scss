@@ -1,14 +1,54 @@
-@media (max-width: 1080px) {
+@media (max-width: 1350px) {
   .about_me {
     p {
       font-size: 0.9em;
     }
   }
-
+  .projects {
+    li {
+      font-size: 0.85em;
+    }
+  }
 }
 
+@media (max-width: 1150px) {
+  .tools {
+    li {
+      font-size: 0.9em;
+    }
+  }
+  .about_me {
+    p {
+      font-size: 0.85em;
+    }
+  }
+  .projects {
+    li {
+      font-size: 0.8em;
+    }
+  }
+}
 
-@media (max-width: 845px) {
+@media (max-width: 1050px) {
+  #header,
+  .tools,
+  .about_me,
+  .projects,
+  #project_info_container {
+    width: 85% !important;
+    margin-left: 7% !important;
+    margin-right: 7% !important;
+    padding: 0.5% !important;
+  }
+  #project_info_container {
+    p {
+      width: 80%;
+      margin: 1% 10%;
+    }
+  }
+}
+
+@media (max-width: 850px) {
   h1 {
     font-size: 1.75em;
   }
@@ -18,11 +58,23 @@
   h4 {
     font-size: 0.9em;
   }
-  li {
-    font-size: 0.9em;
+  .projects {
+    width: 90% !important;
+    margin-right: 5% !important;
+    margin-left: 5% !important;  
+    .coming_soon {
+      margin-left: 5% !important;
+      width: 45% !important;
+    }
+    li {
+      font-size: 0.7em;
+    }
   }
   .about_me p {
-    font-size: 0.95em;
+    width: 95%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    font-size: 0.8em;
   }
  #header_middle {
     a,
@@ -34,8 +86,8 @@
   .tools,
   .about_me,
   .projects {
-    width: 100% !important;
-    margin: 0% !important;
+    width: 80% !important;
+    margin: 1% 10% !important;
     padding: 0.5% !important;
   }
   .tools {
@@ -45,16 +97,35 @@
     height: 35% !important;
     margin-bottom: 0% !important;
   }
+  #show_blog_post_container,
+  #blog_posts,
+  #project_info_container {
+    width: 80% !important;
+    margin: 1% 10% !important;
+  }
 }
 
 @media (max-width: 625px) {
+  #header,
+  #show_blog_post_container,
+  #blog_posts,
+  #project_info_container {
+    width: 95% !important;
+    margin: 1% 2.5% !important;
+  }
+  #project_info_container {
+    ul {
+      margin-left: 15% !important;
+    }
+  }
+
   h1 {
     font-size: 1.5em;
   }
   h2 {
     font-size: 1.25em;
   }
-  li {
+  .tools li {
     font-size: 0.85em;
   }
 
@@ -66,7 +137,35 @@
   .about_me {
     margin-bottom: 0.5%;
     p {
-      font-size: 0.85em;
+      font-size: 0.75em;
+    }
+  }
+  .projects {
+    height: 20% !important;
+    ul {
+      margin: 1% 0% !important;
+      width: 70% !important;
+    }
+    h4 {
+      margin: 1% 25% 1% 0%  !important;
+      width: 75% !important;
+      padding-left: 0% !important;
+      text-align: center;
+    }
+    .deployed {
+      display: block;
+      height: 30% !important;
+      width: 70% !important;
+      margin: 1% 5% 1% 25% !important;
+      float: none !important;
+      
+    }
+    .coming_soon {
+      height: 50% !important;
+      width: 70% !important;
+      margin: 1% 5% 1% 25% !important;
+      float: none !important;
+      display: block; 
     }
   }
 }
@@ -78,14 +177,15 @@
   h4 {
     font-size: 0.75em;
   }
-  li {
+  .tools li {
     font-size: 0.75em;
   }
-  #content,
-  #blog_posts {
-    width: 95%;
-    margin: 1% 2.5%;
+  #project_info_container {
+    ul {
+      margin-left: 5% !important;
+    }
   }
+  
   .about_me {
     height: 42.5% !important;
   }

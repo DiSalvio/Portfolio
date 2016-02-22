@@ -1,9 +1,12 @@
 <p id="notice"><%= notice %></p>
-
-<h3><%= @blog_post.title %></h3>
-<p id=content><%= @blog_post.post %></p>
+<div id='show_blog_post_container'>
+  <div id='show_blog_post_title'>
+    <%= link_to '<i class="fa fa-arrow-left"></i>'.html_safe, blog_posts_path, id: 'back_to_blog_link' %>
+    <h3><%= @blog_post.title %></h3>
+  </div>
+<p id="post_content"><%= @blog_post.content %></p>
 
 <% if current_admin %>
-  <%= link_to 'Edit', edit_blog_post_path(@blog_post) %> |
+  <%= link_to 'Edit', edit_blog_post_path(@blog_post) %>
 <% end %>
-<%= link_to 'Back', blog_posts_path %>
+</div>

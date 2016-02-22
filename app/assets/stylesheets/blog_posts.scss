@@ -1,11 +1,44 @@
 // Place all the styles related to the blog_posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
-#content,
 #blog_posts {
-  width: 70%;
-  margin: 1% 15%;
+  width: 60%;
+  margin: 1% 20%;
+  text-align: center;
+  h2 a {
+    text-decoration: none;
+    color: black;
+  }
+  h2 a:hover {
+    text-decoration: underline;
+  }
+}
+
+#show_blog_post_container {
+  width: 60%;
+  margin: 1% 20%;
+  #show_blog_post_title {
+    a,
+    h3 {
+      margin-top: 0%;
+      margin-bottom: 0%;
+      display: inline-block;
+    }
+    a {
+      width: 5%;
+      margin-left: 15%;
+      text-align: left;
+    }
+    h3 {
+      text-align: center;
+      width: 50%;
+      margin-left: 5%;
+      margin-right: 25%;
+    }
+  }
+  #back_to_blog_link {
+    float: left;
+  }
 }
 
 .errors {
@@ -23,10 +56,10 @@
   }
 }
 
-.blog_post_post {
+.blog_post_content {
   width: 25%;
   margin: 1% 37.5%;
-  #blog_post_post {
+  #blog_post_content {
     width: 100%;
   }
 }
@@ -36,7 +69,4 @@
   display: block;
 }
 
-body {
-  background-image: url(asset-path('symphony.png'));
-  background-repeat: repeat;
-}
+

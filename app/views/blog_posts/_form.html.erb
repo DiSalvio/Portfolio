@@ -4,8 +4,8 @@
   </ul>
 
   <div class="form-inputs">
-    <%= f.input :title, label: false, placeholder: 'Title', :validate => { :presence => true, :uniqueness => false } %>
-    <%= f.input :post, as: :text, label: false, placeholder: 'Post', :validate => { :presence => true, :uniqueness => false } %>
+    <%= f.input :title, id: 'blog_post_title', label: false, placeholder: 'Title', :validate => { :presence => true, :uniqueness => false } %>
+    <%= f.input :content, as: :text, id: 'blog_post_content', label: false, placeholder: 'Content', :validate => { :presence => true, :uniqueness => false } %>
   </div>
 
   <div class="form-actions">

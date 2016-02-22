@@ -28,6 +28,14 @@ ul {
 }
 
 li {
+  a {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
   text-align: left;
 }
 
@@ -36,11 +44,17 @@ li {
   padding: 0.5%;
   margin: 0% 15% 0% 15%;
   width: 70%;
-  border-top: 2.5px ridge gray;  
+   
 }
 
 .about_me {
+  border-top: 2.5px ridge gray; 
   height: 35%;
+  p {
+    width: 80%;
+    margin-right: 10%;
+    margin-left: 10%;
+  }
 }
 
 .tools {
@@ -76,16 +90,16 @@ li {
   border-top: 2.5px ridge gray;
   margin: 0% 15% 0% 15%;
   .deployed {
-    width: 35%;
+    width: 30%;
     height: 100%;
     float: left;
-    margin-left: 15%;
+    margin-left: 20%;
   }
   .coming_soon {
-    width: 35%;
+    width: 40%;
     height: 100%;
     float: right;
-    margin-left: 15%;
+    margin-left: 10%;
   }
 
   h4 {
