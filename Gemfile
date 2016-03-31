@@ -28,9 +28,11 @@ gem 'client_side_validations-simple_form'
 gem 'font-awesome-rails'
 gem 'font-awesome-sass', '~> 4.5.0'
 gem 'pg'
+gem 'rack-timeout'
+
 
 group :production do
-  gem 'unicorn'
+  gem 'puma'
   gem 'rails_12factor'
 end
 
