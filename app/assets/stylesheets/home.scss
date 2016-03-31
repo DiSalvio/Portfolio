@@ -1,0 +1,71 @@
+// Place all the styles related to the pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+#header,
+.tools,
+.about_me,
+.projects,
+#project_info_container {
+  width: 85% !important;
+  margin-left: 7% !important;
+  margin-right: 7% !important;
+  padding: 0.5% !important;
+}
+
+.tools {
+  margin: 1%;
+  #dev_tools,
+  #testing_tools,
+  #research {
+    h4 {
+      text-align: left;
+      margin: 5% 5% 5% 35%;
+    }
+    ul {
+      text-align: left;
+      margin: 0% 5% 0% 35%; 
+    }
+  }
+
+  #dev_tools {
+  }
+
+  #research {
+  } 
+}
+
+.about_me {
+  margin: 1%;
+  text-align: center;
+  border-top: 2.5px ridge gray; 
+  p {
+    width: 85%;
+    margin: 1% 7%;
+  }
+}
+
+.projects {
+  display: inline-flex;
+  border-top: 2.5px ridge gray;
+  a {
+    display: inline;
+    text-align: left;
+    text-decoration: none;
+    color: black;
+  }
+  a:hover {
+   text-decoration: underline;
+  }
+  ul {
+    list-style-type: none;
+    margin: 1em 0 0 5em;
+    padding: 0;
+    display: inline;
+    li {
+      display: inline;
+      list-style-type: none;
+      margin: .25em 5em;
+      padding: .5em 1em;
+    }
+  }
+}

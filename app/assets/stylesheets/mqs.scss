@@ -1,17 +1,4 @@
-@media (max-width: 1350px) {
-  .about_me {
-    p {
-      font-size: 0.9em;
-    }
-  }
-  .projects {
-    li {
-      font-size: 0.85em;
-    }
-  }
-}
-
-@media (max-width: 1150px) {
+@media (max-width: 1028px) {
   .tools {
     li {
       font-size: 0.9em;
@@ -29,59 +16,7 @@
   }
 }
 
-@media (max-width: 1050px) {
-  #header,
-  .tools,
-  .about_me,
-  .projects,
-  #project_info_container {
-    width: 85% !important;
-    margin-left: 7% !important;
-    margin-right: 7% !important;
-    padding: 0.5% !important;
-  }
-  #project_info_container {
-    p {
-      width: 80%;
-      margin: 1% 10%;
-    }
-  }
-}
-
-@media (max-width: 850px) {
-  h1 {
-    font-size: 1.75em;
-  }
-  h2 {
-    font-size: 1.4em;
-  }
-  h4 {
-    font-size: 0.9em;
-  }
-  .projects {
-    width: 90% !important;
-    margin-right: 5% !important;
-    margin-left: 5% !important;  
-    .coming_soon {
-      margin-left: 5% !important;
-      width: 45% !important;
-    }
-    li {
-      font-size: 0.7em;
-    }
-  }
-  .about_me p {
-    width: 95%;
-    margin-left: 2.5%;
-    margin-right: 2.5%;
-    font-size: 0.8em;
-  }
- #header_middle {
-    a,
-    span {
-      font-size: 0.9em;
-    }
-  }
+@media (max-width: 767px) {
   #header,
   .tools,
   .about_me,
@@ -89,13 +24,6 @@
     width: 80% !important;
     margin: 1% 10% !important;
     padding: 0.5% !important;
-  }
-  .tools {
-    height: 25% !important;
-  }
-  .about_me {
-    height: 35% !important;
-    margin-bottom: 0% !important;
   }
   #show_blog_post_container,
   #blog_posts,
@@ -103,9 +31,12 @@
     width: 80% !important;
     margin: 1% 10% !important;
   }
+  .tools {
+    height: 25% !important;
+  }
 }
 
-@media (max-width: 625px) {
+@media (max-width: 425px) {
   #header,
   #show_blog_post_container,
   #blog_posts,
@@ -170,7 +101,7 @@
   }
 }
 
-@media (max-width: 535px) {
+@media (max-width: 375px) {
   h1 {
     font-size: 1.35em;
   }
@@ -189,4 +120,8 @@
   .about_me {
     height: 42.5% !important;
   }
+}
+
+@media (max-width: 325px) {
+
 }

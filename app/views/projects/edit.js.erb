@@ -1,0 +1,3 @@
+$('#project_form').insertAfter('#project_<%= @project.id %>');
+$('#project_form').html('<%= j (render 'form') %>').show();
+$('#project_<%= @project.id %>').hide();

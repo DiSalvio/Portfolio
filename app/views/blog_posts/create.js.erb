@@ -3,8 +3,11 @@ $("ul.errors").html("")
   <% @blog_post.errors.full_messages.each do |message| %>
     $("ul.errors").append($("<li />").html("<%= message.html_safe %>"))
   <% end %>
-<% else %>
+<% elsif @blog_post.published == true %>
   $('#blog_posts').prepend('<%= j (render @blog_post) %>')
+  $('#blog_post_form').slideUp(350)
+  $('#new_blog_post').slideDown(350)
+<% else %>
   $('#blog_post_form').slideUp(350)
   $('#new_blog_post').slideDown(350)
 <% end %>

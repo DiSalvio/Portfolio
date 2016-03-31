@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20160220231407) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "admins", force: :cascade do |t|
     t.string   "email",              default: "", null: false
     t.string   "encrypted_password", default: "", null: false
@@ -30,20 +33,23 @@ ActiveRecord::Schema.define(version: 20160220231407) do
     t.datetime "updated_at",                      null: false
   end
 
-  add_index "admins", ["email"], name: "index_admins_on_email", unique: true
+  add_index "admins", ["email"], name: "index_admins_on_email", unique: true, using: :btree
 
   create_table "blog_posts", force: :cascade do |t|
     t.string   "title"
     t.text     "content"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.boolean  "published",  default: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
   end
 
   create_table "projects", force: :cascade do |t|
     t.string   "name"
     t.text     "description"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.text     "features",    default: [],                 array: true
+    t.boolean  "published",   default: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
   end
 
 end

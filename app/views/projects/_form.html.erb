@@ -1,0 +1,16 @@
+<%= link_to '<i class="fa fa-arrow-left"></i>'.html_safe, projects_path, id: 'back_to_projects_link' %>
+<%= simple_form_for @project, remote: true do |p| %>
+  <ul class="errors">
+    <%= p.error_notification %>
+  </ul>
+
+  <div class="form-inputs">
+    <%= p.input :name, id: 'project_name', label: false, placeholder: 'Project name' %>
+    <%= p.input :description, as: :text, id: 'project_description', label: false, placeholder: 'Project description' %>
+    <%= p.input :published, id: 'project_published', label: 'Publish project info?' %>
+  </div>
+
+  <div class="form-actions">
+    <%= p.button :submit %>
+  </div>
+<% end %>

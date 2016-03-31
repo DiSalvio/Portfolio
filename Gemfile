@@ -27,18 +27,16 @@ gem 'client_side_validations'
 gem 'client_side_validations-simple_form'
 gem 'font-awesome-rails'
 gem 'font-awesome-sass', '~> 4.5.0'
-
+gem 'pg'
 
 group :production do
   gem 'unicorn'
-  gem 'pg'
   gem 'rails_12factor'
 end
 
 
 
 group :development, :test do
-  gem 'sqlite3'
   gem 'pry'
   gem 'rspec-rails'
   gem 'capybara'

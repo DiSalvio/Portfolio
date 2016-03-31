@@ -7,6 +7,7 @@ h6 {
   font-family: 'Nunito', sans-serif;
   font-weight: 400;
   line-height: 1.5;
+  text-align: center;
 }
 
 p,
@@ -21,4 +22,36 @@ span {
 body {
   background-image: url(asset-path('symphony.png'));
   background-repeat: repeat;
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+h2 {
+  margin: 0 0;
+  padding: 0.5%;
+}
+
+h4 {
+  text-align: left;
+  padding: 0.5%;
+}
+
+ul { 
+  margin: auto 0px;
+}
+
+li {
+  a {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  text-align: left;
 }

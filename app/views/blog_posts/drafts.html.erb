@@ -1,0 +1,10 @@
+<p id="notice"><%= notice %></p>
+
+<%= link_to '<i class="fa fa-arrow-left"> Published Posts</i>'.html_safe, blog_posts_path, id: 'back_to_blog_posts_link' %>
+
+<div id="blog_post_form">
+</div>
+
+<div id="blog_posts">
+  <%= render partial: 'draft', collection:  @blog_posts, as: :blog_post %>
+</div>

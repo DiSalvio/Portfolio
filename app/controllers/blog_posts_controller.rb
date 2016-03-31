@@ -1,7 +1,7 @@
 class BlogPostsController < ApplicationController
   before_action :authenticate_admin!, only: [:edit, :update, :destroy, :new, :create]
   before_action :set_admin
-  before_action :get_all_blog_posts, only: [:index, :create, :cancel, :update]
+  before_action :get_all_blog_posts, only: [:new, :index, :create, :update]
   before_action :set_blog_post, only: [:show, :edit, :update, :destroy]  
   # GET /blog_posts
   # GET /blog_posts.json
@@ -38,6 +38,7 @@ class BlogPostsController < ApplicationController
       end
   end
 
+
   # PATCH/PUT /blog_posts/1
   # PATCH/PUT /blog_posts/1.json
   def update
@@ -53,8 +54,8 @@ class BlogPostsController < ApplicationController
       end
     end
   end
-
-  # DELETE /blog_posts/1
+  
+    # DELETE /blog_posts/1
   # DELETE /blog_posts/1.json
   def destroy
     @blog_post.destroy
@@ -65,8 +66,10 @@ class BlogPostsController < ApplicationController
     end
   end
 
-  def cancel
+  def drafts
+    get_drafts
     respond_to do |format|
+      format.html
       format.js
     end
   end
@@ -79,11 +82,15 @@ class BlogPostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def blog_post_params
-      params[:blog_post].permit(:title, :content)
+      params[:blog_post].permit(:title, :content, :published)
     end
 
     def get_all_blog_posts
-      @blog_posts = BlogPost.order(created_at: :desc)
+      @blog_posts = BlogPost.where(published: true).order(created_at: :desc)
+    end
+ 
+    def get_drafts
+      @blog_posts = BlogPost.where(published: false).order(created_at: :desc)
     end
 
     def set_admin

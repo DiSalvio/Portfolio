@@ -1,0 +1,13 @@
+$("ul.errors").html("")
+<% if @project.errors.any? %>
+  <% @project.errors.full_messages.each do |message| %>
+    $("ul.errors").append($("<li />").html("<%= message.html_safe %>"))
+  <% end %>
+<% elsif @project.published == true %>
+  $('#projects').prepend('<%= j (render @project) %>')
+  $('#project_form').slideUp(350)
+  $('#new_project').slideDown(350)
+<% else %>
+  $('#project_form').slideUp(350)
+  $('#new_project').slideDown(350)
+<% end %>

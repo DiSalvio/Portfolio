@@ -7,4 +7,5 @@ $("ul.errors").html("")
   $('#new_blog_post').slideDown(350);
   $('#blog_post_form').html("").insertAfter('#new_blog_post');
   $('#blog_posts').html('<%= j (render @blog_posts) %>');
+  $('#blog_post_<%= @blog_post.id %>').html('<%= j (render @blog_post) %>').show();
 <% end %>

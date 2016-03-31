@@ -1,4 +1,5 @@
-$('#blog_post_form').insertAfter('#blog_post_<%= @blog_post.id%>').html('<%= j (render 'form') %>').show();
-$('#blog_post_<%= @blog_post.id %>').hide();
 $('#new_blog_post').hide();
+$('#blog_post_form').insertAfter('#blog_post_<%= @blog_post.id %>')
+$('#blog_post_form').html('<%= j (render 'form') %>').show();
+$('#blog_post_<%= @blog_post.id %>').hide();
 

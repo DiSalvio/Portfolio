@@ -1,0 +1,10 @@
+<p id="notice"><%= notice %></p>
+
+<%= link_to '<i class="fa fa-arrow-left"> Published Projects</i>'.html_safe, projects_path, id: 'back_to_projects_link' %>
+
+<div id='project_form'>
+</div>
+
+<div id="projects">
+  <%= render partial: 'draft', collection: @projects, as: :project %>
+</div>
