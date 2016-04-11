@@ -2,19 +2,51 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#project_info_container {
-  h2,
-  h3 {
-    padding: 1%;
-    margin-bottom: 1%;
+#projects {
+  width: 80%;
+  margin: 0% 10%;
+
+
+  h2 {
+
   }
-  h3 {
-    border-top: 2.5px ridge gray;
+
+  h2 a {
+    text-decoration: none;
+    color: black;
   }
-  
-  width: 60%;
-  margin: 0% 20%;
-  ul {
-    margin-left: 25%;
+  h2 a:hover {
+    text-decoration: underline;
+  }
+
+  p {
+    text-align: center;
+    width: 80%;
+    margin: 1% 10%;
+  }
+}
+
+.project {
+ border-bottom: 2.5px ridge gray;
+}
+
+.project_features {
+  margin: 1% 0%;
+  display: inline-flex;
+  h4 {
+      margin: 0;
+      width: 20%;
+      text-align: left;
+      padding: 0.5em 2em 0.5em 0em;
+  }
+  ul { 
+    margin: 0;
+  } 
+  li {
+      vertical-align: top;
+      font-size: 0.85em;
+      padding: 0.5em 1em;
+      list-style-type: square;
+      display: inline-block;
   }
 }

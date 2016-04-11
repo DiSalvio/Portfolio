@@ -4,8 +4,7 @@
 #header,
 .tools,
 .about_me,
-.projects,
-#project_info_container {
+.projects {
   width: 85% !important;
   margin-left: 7% !important;
   margin-right: 7% !important;
@@ -58,13 +57,14 @@
   }
   ul {
     list-style-type: none;
-    margin: 1em 0 0 5em;
+    margin: 0.65em 0 0 4em;
     padding: 0;
     display: inline;
     li {
+      vertical-align: top;
       display: inline;
       list-style-type: none;
-      margin: .25em 5em;
+      margin: .25em 4em;
       padding: .5em 1em;
     }
   }
