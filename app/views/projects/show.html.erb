@@ -1,5 +1,24 @@
 <p id="notice"><%= notice %></p>
 <div id="project_form"></div>
 <%= link_to '<i class="fa fa-arrow-left"></i>'.html_safe, projects_path, id: 'back_to_projects_link' %>
-<%= render @project %>
+<div class="project" id="project_<%=@project.id%>">
+  
+  <h2><%= link_to "#{@project.name}", project_path(@project)  %></h2>
+  
+  <% if current_admin %>
+    <%= link_to '<i class="fa fa-pencil-square-o"></i>'.html_safe, edit_project_path(@project), remote: true %>
+    <%= link_to '<i class="fa fa-times"></i>'.html_safe, @project, method: :delete, data: { confirm: 'Are you sure you want to delete this project?' }, remote: true %>
+  <% end %>
+  
+  <p><%= @project.description %></p>
 
+  <div class="project_features"> 
+    <h4>Features:</h4>
+    <ul id="<%= @project.name %>_features">
+      <% @project.features.each do |f| %>
+        <li><%= f %></li>
+      <% end %>
+    </ul>
+  </div>
+
+</div>

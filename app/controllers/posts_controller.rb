@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :authenticate_admin!, only: [:edit, :update, :destroy, :new, :create]
+  before_action :authenticate_admin!, only: [:drafts, :edit, :update, :destroy, :new, :create]
   before_action :set_admin
   before_action :get_posts, only: [:new, :index, :create, :update]
   before_action :set_post, only: [:show, :edit, :update, :destroy]  

@@ -1,5 +1,5 @@
 class ProjectsController < ApplicationController
-  before_action :authenticate_admin!, only: [:edit, :update, :destroy, :new, :create]
+  before_action :authenticate_admin!, only: [:drafts, :edit, :update, :destroy, :new, :create]
   before_action :set_admin
   before_action :set_project, only: [:show, :edit, :update, :destroy]
   before_action :get_projects, only: [:index, :create, :update]
