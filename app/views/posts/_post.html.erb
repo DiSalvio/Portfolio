@@ -1,0 +1,14 @@
+<div id="post_<%=post.id%>">
+  <br>
+  <h2><%= link_to "#{post.title}", post %></h2>
+  
+  <% if current_admin %> 
+    <%= link_to '<i class="fa fa-pencil-square-o"></i>'.html_safe, edit_post_path(post), remote: true %>
+    <%= link_to '<i class="fa fa-times"></i>'.html_safe, post, method: :delete, data: { confirm: 'Are you sure you want to delete this post?' }, remote: true %>
+  <% end %>
+  
+  <br> 
+  <%= post.content %>
+  <br>
+
+</div>

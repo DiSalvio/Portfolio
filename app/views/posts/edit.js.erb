@@ -1,0 +1,5 @@
+$('#new_post').hide();
+$('#post_form').insertAfter('#post_<%= @post.id %>')
+$('#post_form').html('<%= j (render 'form') %>').show();
+$('#post_<%= @post.id %>').hide();
+

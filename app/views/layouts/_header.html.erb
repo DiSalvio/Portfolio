@@ -19,7 +19,7 @@
       <span id="phone_number"><%= @admin.phone_number %></span>
     <% end %>
 
-    <% if controller_name == 'blog_posts' %>
+    <% if controller_name == 'posts' %>
       <h1>Blog</h1>
     <% end %>
 
@@ -29,11 +29,11 @@
     
     <% if controller_name == 'pages' %>
       <div id="blog_link">
-        <%= link_to "Blog", blog_posts_path %>
+        <%= link_to "Blog", posts_path %>
       </div>
     <% end %>
 
-    <% if controller_name == 'blog_posts' || controller_name == 'projects' %>
+    <% if controller_name == 'posts' || controller_name == 'projects' %>
       <div id="portfolio">
         <%= link_to "Portfolio", root_path %>
       </div>

@@ -1,0 +1,13 @@
+$("ul.errors").html("")
+<% if @post.errors.any? %>
+  <% @post.errors.full_messages.each do |message| %>
+    $("ul.errors").append($("<li />").html("<%= message.html_safe %>"))
+  <% end %>
+<% elsif @post.published == true %>
+  $('#posts').prepend('<%= j (render @post) %>')
+  $('#post_form').slideUp(350)
+  $('#new_post').slideDown(350)
+<% else %>
+  $('#post_form').slideUp(350)
+  $('#new_post').slideDown(350)
+<% end %>

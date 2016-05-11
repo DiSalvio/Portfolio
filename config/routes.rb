@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   
-  resources :blog_posts do
+  resources :posts do
     get 'drafts', on: :collection
   end
 
@@ -12,5 +12,5 @@ Rails.application.routes.draw do
   devise_for :admins, :skip => :registrations
   get '/home' => 'pages#home'
   root 'pages#home'
-  
+
 end

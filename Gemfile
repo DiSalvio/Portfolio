@@ -19,7 +19,6 @@ gem 'font-awesome-sass', '~> 4.5.0'
 gem 'pg'
 gem 'rack-timeout'
 
-
 group :production do
   gem 'puma'
   gem 'rails_12factor'
