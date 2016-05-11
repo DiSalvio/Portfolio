@@ -1,7 +1,7 @@
 // Place all the styles related to the blog_posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-#blog_posts {
+#posts {
   width: 60%;
   margin: 1% 20%;
   text-align: center;
@@ -14,10 +14,10 @@
   }
 }
 
-#show_blog_post_container {
+#show_post_container {
   width: 60%;
   margin: 1% 20%;
-  #show_blog_post_title {
+  #show_post_title {
     a,
     h3 {
       margin-top: 0%;
@@ -48,25 +48,35 @@
   margin: 1% 35% 1% 40%;
 }
 
-.blog_post_title {
+.post_title {
   width: 25%;
   margin: 1% 37.5%;
-  #blog_post_title {
+  #post_title {
     width: 100%;
   }
 }
 
-.blog_post_content {
+.post_content {
   width: 25%;
   margin: 1% 37.5%;
-  #blog_post_content {
+  #post_content {
     width: 100%;
   }
 }
 
+.post_published {
+  width: 25%;
+  margin: 1% 37.5%;
+  text-align: center;
+}
 
-#form-inputs {
+.form-inputs {
   display: block;
 }
 
-
+.form-actions {
+  display: block;
+  width: 25%;
+  margin: 1% 37.5%;
+  text-align: center;
+}
