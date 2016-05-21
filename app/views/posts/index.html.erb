@@ -11,3 +11,10 @@
 <div id="posts">
   <%= render partial: 'post', collection: @posts, as: :post %>
 </div>
+
+<div class="tags_list">
+  <h4>Popular Tags</h4>
+  <% tag_list(Tag.counts) do |tag| %>
+    <%= link_to tag.name, tag_path(tag.name) %>
+  <% end %>
+</div>

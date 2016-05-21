@@ -72,11 +72,11 @@ class ProjectsController < ApplicationController
   end
 
   def get_projects
-    @projects = Project.where(published: true).order(created_at: :asc)
+    @projects = Project.published.order(created_at: :asc)
   end
  
   def get_drafts
-    @projects = Project.where(published: false).order(created_at: :asc)
+    @projects = Project.drafts.order(created_at: :asc)
   end
 
   def project_params

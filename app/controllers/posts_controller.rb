@@ -1,10 +1,15 @@
 class PostsController < ApplicationController
   before_action :authenticate_admin!, only: [:drafts, :edit, :update, :destroy, :new, :create]
   before_action :set_admin
-  before_action :get_posts, only: [:new, :index, :create, :update]
+  before_action :get_posts, only: [:new, :create, :update]
   before_action :set_post, only: [:show, :edit, :update, :destroy]  
   
   def index
+    if params[:tag]
+      get_tagged_posts
+    else
+      get_posts
+    end
   end
 
   def show
@@ -68,18 +73,22 @@ class PostsController < ApplicationController
     end
     
     def post_params
-      params[:post].permit(:title, :content, :published)
+      params[:post].permit(:title, :content, :all_tags, :published)
     end
 
     def get_posts
-      @posts = Post.where(published: true).order(created_at: :desc)
+      @posts = Post.published.order(created_at: :desc)
     end
  
     def get_drafts
-      @posts = Post.where(published: false).order(created_at: :desc)
+      @posts = Post.drafts.order(created_at: :desc)
     end
 
     def set_admin
       Admin.set_admin
+    end
+
+    def get_tagged_posts
+      @posts = Post.published.tagged_with(params[:tag])
     end
 end
