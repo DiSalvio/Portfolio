@@ -1,17 +1,17 @@
 @media (max-width: 1028px) {
   .tools {
     li {
-      font-size: 0.9em;
+      font-size: 1.25em !important;
     }
   }
   .about_me {
     p {
-      font-size: 0.85em;
+      font-size: 1em;
     }
   }
   .projects {
     li {
-      font-size: 0.8em;
+      font-size: 1.25em !important;
     }
   }
 }
@@ -32,7 +32,7 @@
     margin: 1% 10% !important;
   }
   .tools {
-    height: 25% !important;
+    height: 40% !important;
   }
 }
 
@@ -44,10 +44,8 @@
     width: 95% !important;
     margin: 1% 2.5% !important;
   }
-  #project_info_container {
-    ul {
+  #project_info_container ul {
       margin-left: 15% !important;
-    }
   }
 
   h1 {
@@ -57,18 +55,15 @@
     font-size: 1.25em;
   }
   .tools li {
-    font-size: 0.85em;
+    font-size: 1em !important;
   }
-
-  #header_middle { 
-    a, span {
-      font-size: 0.85em;
-    }
+  #header_middle a, span {
+      font-size: 1em !important;
   }
   .about_me {
     margin-bottom: 0.5%;
     p {
-      font-size: 0.75em;
+      /*font-size: 1em !important;*/
     }
   }
   .projects {
@@ -83,21 +78,6 @@
       padding-left: 0% !important;
       text-align: center;
     }
-    .deployed {
-      display: block;
-      height: 30% !important;
-      width: 70% !important;
-      margin: 1% 5% 1% 25% !important;
-      float: none !important;
-      
-    }
-    .coming_soon {
-      height: 50% !important;
-      width: 70% !important;
-      margin: 1% 5% 1% 25% !important;
-      float: none !important;
-      display: block; 
-    }
   }
 }
 
@@ -109,16 +89,17 @@
     font-size: 0.75em;
   }
   .tools li {
-    font-size: 0.75em;
+    font-size: 0.85em;
   }
-  #project_info_container {
-    ul {
+  #project_info_container  ul {
       margin-left: 5% !important;
-    }
   }
   
   .about_me {
     height: 42.5% !important;
+    p {
+	font-size: 0.85em !important;
+    }
   }
 }
 

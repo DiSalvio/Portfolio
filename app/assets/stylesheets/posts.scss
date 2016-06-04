@@ -14,6 +14,13 @@
   }
 }
 
+#new_post,
+#post_drafts_link,
+#back_to_blog_link {
+  text-align: center;
+  display: block;
+}
+
 #show_post_container {
   width: 60%;
   margin: 1% 20%;
@@ -57,8 +64,8 @@
 }
 
 .post_content {
-  width: 25%;
-  margin: 1% 37.5%;
+  width: 80%;
+  margin: 1% 10%;
   #post_content {
     width: 100%;
   }
@@ -79,4 +86,35 @@
   width: 25%;
   margin: 1% 37.5%;
   text-align: center;
+}
+
+.tags {
+  display: inline-block;
+}
+
+.tag_list {
+  position: fixed;
+  bottom: 0;
+  background: white;
+  width: 85%;
+  margin: 0% 7%;
+  display: inline-flex;
+  border-top: 2.5px ridge gray;
+  h3 {
+    padding: 0.5em 0;
+    margin: 0;
+  }
+  ul {
+    list-style-type: none;
+    margin: 0.65em 0 0 4em;
+    padding: 0;
+    display: inline;
+    li {
+      vertical-align: top;
+      display: inline;
+      list-style-type: none;
+      margin: 0.25em 2em;
+      padding: 0.5em 1em;
+    }
+  }
 }

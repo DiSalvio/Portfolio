@@ -1,21 +1,26 @@
+<div id='posts'>
 <p id="notice"><%= notice %></p>
+
 <div id='post_form'>
 </div>
+
 <%= link_to '<i class="fa fa-arrow-left"></i>'.html_safe, posts_path, id: 'back_to_posts_link' %>
-<div id="post_<%=@post.id%>">
-  <br>
+
+<div id="post_<%=@post.id%>" class="post">
   <h2><%= link_to "#{@post.title}", @post %></h2>      
    <% if current_admin %> 
     <%= link_to '<i class="fa fa-pencil-square-o"></i>'.html_safe, edit_post_path(@post), remote: true %>
     <%= link_to '<i class="fa fa-times"></i>'.html_safe, @post, method: :delete, data: { confirm: 'Are you sure you want to delete this post?' }, remote: true %>
   <% end %>
  
-
-  <p>		        
-  <%= @post.content %>
-  </p>
+  <div class="post_content">
+    <p>		        
+      <%= @post.content %>
+    </p>
+  </div>
 
   <div class="tags">
     <%=raw tag_links(@post.all_tags)%>
   </div>
+</div>
 </div>

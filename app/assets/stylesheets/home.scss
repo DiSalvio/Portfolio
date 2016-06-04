@@ -12,6 +12,7 @@
 }
 
 .tools {
+  height: 40%;
   margin: 1%;
   #dev_tools,
   #testing_tools,
@@ -34,6 +35,7 @@
 }
 
 .about_me {
+  height: 40%;
   margin: 1%;
   text-align: center;
   border-top: 2.5px ridge gray; 
@@ -44,8 +46,14 @@
 }
 
 .projects {
-  display: inline-flex;
+  position: fixed;
+  bottom: 0;
+  background: white;
   border-top: 2.5px ridge gray;
+  h2 {
+    text-align: right;
+    display: inline-flex;
+  } 
   a {
     display: inline;
     text-align: left;
