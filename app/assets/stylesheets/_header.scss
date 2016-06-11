@@ -4,7 +4,9 @@
   height: 15%;
   padding: .5%;
   display: inline-block;
-  border-bottom: 2.5px ridge gray; 
+  border-bottom: 2.5px ridge white; 
+  border-right: 2.5px ridge whitesmoke;
+  border-left: 2.5px ridge whitesmoke;
   h1 {
     margin: 0 0;
   }
@@ -14,8 +16,12 @@
     height: 100%;
     float: left;
     display: inline-block;
-
-      }
+    img {
+      margin-left: 20%;
+      padding: 5%;
+      vertical-align: middle;
+    }
+  }
 
   
   #header_middle {
@@ -58,6 +64,8 @@
       padding: 1%;
       margin: 15% 0% 15% 0%;
       a {
+	height: 100%;
+        margin: 10% 1%;
         text-decoration: none;
         font-size: 22px;
 	color: black;
@@ -81,7 +89,7 @@
       }
       a:hover {
       text-decoration: underline;
-      color: black;
+      color: grey;
       }
     }
   }

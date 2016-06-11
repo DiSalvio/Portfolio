@@ -1,0 +1,13 @@
+<div id="post_<%=post.id%>" class="post">
+  <h2><%= link_to "#{post.title}", post %></h2>
+  
+  <div class="post_content">  
+    <p> 
+      <%= post.content %>
+    </p>
+  </div>
+
+  <div class="tags">
+    <%= post.all_tags %>
+  </div>
+</div>

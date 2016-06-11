@@ -6,6 +6,5 @@ $("ul.errors").html("")
 <% else %>
   $('#new_post').slideDown(350);
   $('#post_form').html("").insertAfter('#new_post');
-  $('#posts').html('<%= j (render @posts) %>');
   $('#post_<%= @post.id %>').html('<%= j (render @post) %>').show();
 <% end %>

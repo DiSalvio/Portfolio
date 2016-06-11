@@ -13,7 +13,7 @@
 </div>
 
 <div class="tag_list">
-  <h3>Popular Tags:</h3>
+  <h3>Top Tags:</h3>
   <ul id="tag_list">
     <% tag_list(Tag.counts) do |tag| %>
       <li class="tag"><%= link_to tag.name, tag_path(tag.name), id: 'tag_link' %></li>

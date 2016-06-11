@@ -1,24 +1,39 @@
 <p id="notice"><%= notice %></p>
 <div id="project_form"></div>
-<%= link_to '<i class="fa fa-arrow-left"></i>'.html_safe, projects_path, id: 'back_to_projects_link' %>
 <div class="project" id="project_<%=@project.id%>">
-  
-  <h2><%= link_to "#{@project.name}", project_path(@project)  %></h2>
-  
-  <% if current_admin %>
-    <%= link_to '<i class="fa fa-pencil-square-o"></i>'.html_safe, edit_project_path(@project), remote: true %>
-    <%= link_to '<i class="fa fa-times"></i>'.html_safe, @project, method: :delete, data: { confirm: 'Are you sure you want to delete this project?' }, remote: true %>
-  <% end %>
-  
-  <p><%= @project.description %></p>
-
-  <div class="project_features"> 
-    <h4>Features:</h4>
-    <ul id="<%= @project.name %>_features">
-      <% @project.features.each do |f| %>
-        <li><%= f %></li>
-      <% end %>
-    </ul>
+  <div class="project_nav col-1-1">
+    <div id="proj_header_left">
+      <%= link_to '<i class="fa fa-arrow-left"></i> All projects'.html_safe, projects_path, id: 'back_to_projects_link' %>
+    </div>
+    <div id="proj_header_middle">
+      <h3><%= @project.name  %></h3>
+    </div>
+    <div id="proj_header_right">
+      <div class="icons">
+        <% if current_admin %>
+          <%= link_to '<i class="fa fa-pencil-square-o"></i>'.html_safe, edit_project_path(@project), remote: true %>
+          <%= link_to '<i class="fa fa-times"></i>'.html_safe, @project, method: :delete, data: { confirm: 'Are you sure you want to delete this project?' }, remote: true %>
+        <% end %>
+      </div>
+    </div>
   </div>
-
+  <div class="grid grid-pad">
+      <div class="col-1-2">
+         <div class="content">
+             <p><%= @project.description %></p>
+         </div>
+      </div>
+      <div class="col-1-2">
+         <div class="content">
+           <div class="project_features"> 
+             <h4>Features:</h4>
+             <ul id="<%= @project.name %>_features">
+               <% @project.features.each do |f| %>
+                 <li><%= f %></li>
+               <% end %>
+             </ul>
+           </div>
+         </div>
+      </div>
+  </div> 
 </div>

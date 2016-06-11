@@ -77,11 +77,11 @@ class PostsController < ApplicationController
     end
 
     def get_posts
-      @posts = Post.published.order(created_at: :desc)
+      @posts = Post.published.order(updated_at: :desc)
     end
  
     def get_drafts
-      @posts = Post.drafts.order(created_at: :desc)
+      @posts = Post.drafts.order(updated_at: :desc)
     end
 
     def set_admin

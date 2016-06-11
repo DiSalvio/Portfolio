@@ -4,7 +4,7 @@ module PostsHelper
   end
 
   def tag_list(tags)
-    tags.reverse.each do |tag|
+    tags.each do |tag|
       yield(tag)
     end
   end

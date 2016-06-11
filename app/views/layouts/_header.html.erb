@@ -1,10 +1,12 @@
 <div id="header">
 
   <div id="header_left">
-    
-   <%= image_tag "StephenDiSalvio.jpg" %>
+   <% if controller_name == 'pages' %> 
+     <%= image_tag "StephenDiSalvio.jpg" %>
+   <% end %>
+   
+   
 
-    
     <% if current_admin != nil && (controller_name == 'pages' || controller_name == 'blog_posts') %>
       <%= link_to "Log Out", destroy_admin_session_path, method: :delete %>
     <% end %>
@@ -32,12 +34,10 @@
         <%= link_to "Blog", posts_path %>
       </div>
     <% end %>
-
     <% if controller_name == 'posts' || controller_name == 'projects' %>
       <div id="portfolio">
-        <%= link_to "Portfolio", root_path %>
+        <%= link_to "Home", root_path %>
       </div>
-    <% end %>
-
+    <% end %>   
   </div>
 </div>

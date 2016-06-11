@@ -1,9 +1,11 @@
 <p id="notice"><%= notice %></p>
 
-<% if current_admin %>
-  <%= link_to 'New Project', new_project_path, remote: true, id: 'new_project' %>
-  <%= link_to 'Drafts', drafts_projects_path, id: 'project_drafts_link' %>
-<% end %>
+<div class="project_nav">
+  <% if current_admin %>
+    <%= link_to 'New Project', new_project_path, remote: true, id: 'new_project' %>
+    <%= link_to 'Drafts', drafts_projects_path, id: 'project_drafts_link' %>
+  <% end %>
+</div>
 
 <div id='project_form'>
 </div>
