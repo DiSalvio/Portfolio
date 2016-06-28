@@ -7,6 +7,10 @@ $("ul.errors").html("")
   $('#posts').prepend('<%= j (render @post) %>')
   $('#post_form').slideUp(350)
   $('#new_post').slideDown(350)
+  $('#tag_list').html('').slideDown(350)
+  <% tag_list(Tag.counts) do |tag| %>
+        $('#tag_list').append('<li class="tag"><%= link_to tag.name, tag_path(tag.name), id: 'tag_link' %></li>')
+  <% end %>
 <% else %>
   $('#post_form').slideUp(350)
   $('#new_post').slideDown(350)
