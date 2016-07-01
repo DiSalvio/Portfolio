@@ -5,6 +5,8 @@ class Post < ActiveRecord::Base
 
   has_many :taggings
   has_many :tags, through: :taggings
+  
+  mount_uploader :image, ImageUploader
 
   def all_tags=(names)
     self.tags = names.split(",").map do |name|

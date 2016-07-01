@@ -16,6 +16,7 @@
       </div>
     </div>
   </div>
+  <%= image_tag @post.image_url(:large).to_s %>
   <div class="post_content">
     <p>		        
       <%= @post.content %>

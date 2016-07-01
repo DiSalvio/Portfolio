@@ -18,6 +18,8 @@ gem 'font-awesome-rails'
 gem 'font-awesome-sass', '~> 4.5.0'
 gem 'pg'
 gem 'rack-timeout'
+gem 'carrierwave'
+gem 'rmagick'
 
 group :production do
   gem 'puma'

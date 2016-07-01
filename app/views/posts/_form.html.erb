@@ -1,5 +1,5 @@
 <%= link_to '<i class="fa fa-arrow-left"></i>'.html_safe, @post, id: 'back_to_blog_link' %>
-<%= simple_form_for @post, remote: true, :validate => { :presence => true, :uniqueness => false } do |f| %>
+<%= simple_form_for @post, remote: true, multipart: true, authenticity_token: true, :validate => { :presence => true, :uniqueness => false } do |f| %>
   <ul class="errors">
     <%= f.error_notification %>
   </ul>
@@ -8,6 +8,7 @@
     <%= f.input :title, id: 'post_title', label: false, placeholder: 'Title', :validate => { :presence => true, :uniqueness => false } %>
     <%= f.input :content, as: :text, id: 'post_content', label: false, placeholder: 'Content', :validate => { :presence => true, :uniqueness => false } %>
     <%= f.text_field :all_tags, placeholder: "Tags separated by commas", :validate => { :length => true, :uniqueness => true } %>
+    <%= f.file_field :image %>
     <%= f.input :published, id: 'post_published', label: 'Publish post?' %> 
   </div>
 
