@@ -1,10 +1,19 @@
 <p id="notice"><%= notice %></p>
 
-<%= link_to '<i class="fa fa-arrow-left"> Published Posts</i>'.html_safe, posts_path, id: 'back_to_posts_link' %>
+<div class="admin_actions">
+  <%= link_to '<i class="fa fa-arrow-left fa-lg"></i> Published Posts'.html_safe, posts_path, id: 'back_to_blog_link', class: 'button nav_button' %>
+  <%= link_to 'New Post', new_post_path, remote: true, id: 'new_post', class: 'button nav_button' %>
+</div>
 
 <div id="post_form">
 </div>
 
-<div id="posts">
-  <%= render partial: 'draft', collection:  @posts, as: :post %>
-</div>
+<% unless @posts.empty? %>
+  <div id="posts">
+    <%= render partial: 'draft', collection:  @posts, as: :post %>
+  </div>
+<% else %>
+  <div class="no_posts">
+    <h4>No drafts have been created. Click the 'New post' button above to get started!</h4>
+  </div>
+<% end %>

@@ -4,8 +4,7 @@ $('ul.errors').html("")
     $("ul.errors").append($("<li />").html("<%= message.html_safe %>"))
   <% end %>
 <% else %>
-  $('#new_project').slideDown(350);
-  $('#project_form').html("").insertAfter('#new_project');
-  $('#projects').html('<%= j (render @projects) %>');
-  $('#project_<%= @project.id %>').html('<%= j (render @project) %>').show();
+  $('#project_form').html("").css({"border": "none", "padding": "0%"}).hide();
+  $('#projects').show();
+  $('.show_project').html('<%= j (render @project) %>')
 <% end %>

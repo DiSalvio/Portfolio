@@ -1,6 +1,10 @@
 <div id="post_<%=post.id%>" class="post">
   <h2><%= link_to "#{post.title}", post %></h2>
   
+  <div class="post_image">
+    <%= image_tag post.image_url(:medium).to_s %>
+  </div>
+
   <div class="post_content">  
     <p> 
       <%= post.content %>

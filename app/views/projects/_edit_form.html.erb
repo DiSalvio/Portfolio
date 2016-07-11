@@ -1,4 +1,4 @@
-<%= link_to '<i class="fa fa-times fa-lg"></i>'.html_safe, project_cancel_path, id: 'cancel_project', class: 'icon', remote: true %>
+<%= link_to '<i class="fa fa-times fa-lg"></i>'.html_safe, project_cancel_edit_path, id: 'cancel_project', class: 'icon', remote: true %>
 <%= simple_form_for @project, remote: true do |p| %>
   <ul class="errors">
     <%= p.error_notification %>

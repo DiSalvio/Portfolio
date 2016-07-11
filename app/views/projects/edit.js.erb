@@ -1,3 +1,2 @@
-$('#project_form').insertAfter('#project_<%= @project.id %>');
-$('#project_form').html('<%= j (render 'form') %>').show();
-$('#project_<%= @project.id %>').hide();
+$('#project_form').html('<%= j (render 'edit_form') %>').css({"border": "2.5px groove whitesmoke", "padding": "2%"}).show();
+$('#projects').hide();

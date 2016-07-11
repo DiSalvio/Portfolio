@@ -1,15 +1,19 @@
 <p id="notice"><%= notice %></p>
-
-<div class="project_nav">
-  <% if current_admin %>
-    <%= link_to 'New Project', new_project_path, remote: true, id: 'new_project' %>
-    <%= link_to 'Drafts', drafts_projects_path, id: 'project_drafts_link' %>
-  <% end %>
-</div>
-
+<% if current_admin %>
+  <div class="admin_actions">
+    <%= link_to 'Drafts <i class="fa fa-arrow-right fa-lg"></i>'.html_safe, drafts_projects_path, id: 'project_drafts_link', class: 'button nav_button' %>
+    <%= link_to 'New Project', new_project_path, remote: true, id: 'new_project', class: 'button nav_button' %>
+  </div>
+<% end %>
 <div id='project_form'>
 </div>
 
-<div id="projects">
-  <%= render partial: 'project', collection: @projects, as: :project %>
-</div>
+<% unless @projects.empty? %>
+  <div id="projects">
+    <%= render partial: 'project', collection: @projects, as: :project %>
+  </div>
+<% else %>
+  <div id="no_projects">
+    <h4>No projects have been published. Check back later!</h4>
+  </div>
+<% end %>

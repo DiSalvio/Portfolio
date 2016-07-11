@@ -5,7 +5,7 @@
   background-image: url(asset-path('symphony.png'));
   background-repeat: repeat;
   margin: 0;
-  border: 2px groove white;
+  border: 2.5px groove white;
   width: 60%;
   margin: 1% 20% 10% 20%;
   padding: 2%;
@@ -19,76 +19,56 @@
   }
 }
 
-.post {
-  padding: 3%;
-  border-bottom: 1px ridge white;
-}
-
-.post_header {
-  vertical-align: top;
-  display: inline;
+.no_posts {
+  border: 2px groove white;
   width: 60%;
+  padding: 2%;
   margin: 1% 20%;
   text-align: center;
-  #back_to_posts_link {
-    vertical-align: top;
-    float: left;
-    text-align: left;
+  h4 {
+    text-align: center;
   }
-  .icons { 
-    text-align: right;
-    float: right;
-    i {
-      vertical-align: top;
-    }
-   }  
 }
 
+.post {
+  padding: 3%;
+  border-bottom: 2.5px ridge white;
+}
+
+.show_post {
+  margin: 5% 0%;
+  padding: 3%;
+}
+
+#edit_post_icon,
+#delete_post_icon,
+#cancel_post {
+  text-align: center;
+  margin: 0% 1%;
+  float: right;
+}
 
 #new_post,
 #post_drafts_link,
-#back_to_blog_link {
+#back_to_blog_link,
+#back_to_posts_link {
   text-align: center;
   display: block;
 }
 
-#show_post_container {
-  width: 60%;
-  margin: 1% 20%;
-  #show_post_title {
-    a,
-    h3 {
-      margin-top: 0%;
-      margin-bottom: 0%;
-      display: inline-block;
-    }
-    a {
-      width: 5%;
-      margin-left: 15%;
-      text-align: left;
-    }
-    h3 {
-      text-align: center;
-      width: 50%;
-      margin-left: 5%;
-      margin-right: 25%;
-    }
-  }
-  #back_to_blog_link {
-    float: left;
-  }
+#back_to_posts_link {
+  float: left;
 }
 
-.errors {
-  color: red;
-  list-style: none;
-  width: 25%;
-  margin: 1% 35% 1% 40%;
+#post_form {
+  width: 60%;
+  margin: 1% 20%;
 }
 
 .post_title {
-  width: 25%;
-  margin: 1% 37.5%;
+  display: inline-block;
+  width: 50%;
+  margin: 1% 25%;
   #post_title {
     width: 100%;
   }
@@ -96,32 +76,58 @@
 
 .post_content {
   width: 80%;
+  padding: 1%;
   margin: 1% 10%;
   #post_content {
     width: 100%;
   }
+  p {
+    width: 100%;
+    text-align: left;
+  }
+}
+
+#post_form_tags {
+  width: 50%;
+  padding: 1%;
+  margin: 1% 25%;
+}
+
+#post_upload {
+  display: block;
+  width: 50%;
+  padding: 1%;
+  margin: 1% 25%;
+  border: 2.5px groove whitesmoke;
 }
 
 .post_published {
-  width: 25%;
-  margin: 1% 37.5%;
+  width: 40%;
+  padding: 2%;
+  margin: 1% 30%;
   text-align: center;
 }
 
-.form-inputs {
-  display: block;
+#post_all_tags {
+  width: 40%;
+  margin: 1% 30%;
 }
 
-.form-actions {
-  display: block;
-  width: 25%;
-  margin: 1% 37.5%;
-  text-align: center;
+.show_tags a {
+  padding: 1% 2%;
+  text-decoration: none;
+  color: black;
+  border: 2.5px groove white;
+  border-radius: 5px;
 }
 
 .tags {
   display: inline-block;
+  width: 60%;
+  padding: 2%;
+  margin: 1% 20%;
   a {
+    padding: 1% 2%;
     text-decoration: none;
     color: black;
     border: 2.5px groove white;
@@ -133,7 +139,7 @@
   background-image: url(asset-path('symphony.png'));
   background-repeat: repeat;
   margin: 0;
-  padding: 2% 5%;
+  padding: 2% 1% 2% 3%;
   position: fixed;
   bottom: 0;
   width: 70%;
@@ -149,7 +155,7 @@
   ul {
     width: 80%;
     list-style-type: none;
-    margin: 0.65em 0.5em 0 4em;
+    margin: 0.65em 0.5em 0 2em;
     padding: 0;
     display: inline;
     li {

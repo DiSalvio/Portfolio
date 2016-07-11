@@ -1,22 +1,29 @@
 <p id="notice"><%= notice %></p>
 
 <% if current_admin %>
-  <%= link_to 'New Post', new_post_path, remote: true, id: 'new_post' %>
-  <%= link_to 'Drafts', drafts_posts_path, id: 'post_drafts_link' %>
+  <div class="admin_actions">
+    <%= link_to 'Drafts <i class="fa fa-arrow-right fa-lg"></i>'.html_safe, drafts_posts_path, id: 'post_drafts_link', class: 'button nav_button' %>
+    <%= link_to 'New Post', new_post_path, remote: true, id: 'new_post', class: 'button nav_button' %>
+  </div>
+  <div id='post_form'>
+  </div>
 <% end %>
 
-<div id='post_form'>
-</div>
+<% unless @posts.empty? %>
+  <div id="posts">
+    <%= render partial: 'post', collection: @posts, as: :post %>
+  </div>
 
-<div id="posts">
-  <%= render partial: 'post', collection: @posts, as: :post %>
-</div>
-
-<div class="tag_list">
-  <h3>Top Tags:</h3>
-  <ul id="tag_list">
-    <% tag_list(Tag.counts) do |tag| %>
-      <li class="tag"><%= link_to tag.name, tag_path(tag.name), id: 'tag_link' %></li>
-    <% end %>
-  </ul>
-</div>
+  <div class="tag_list">
+    <h3>Tags:</h3>
+    <ul id="tag_list">
+      <% tag_list(Tag.counts) do |tag| %>
+        <li class="tag"><%= link_to tag.name, tag_path(tag.name), id: 'tag_link' %></li>
+      <% end %>
+    </ul>
+  </div>
+<% else %>
+  <div class="no_posts">
+    <h4>No posts have been published. Check back later!</h4>
+  </div>
+<% end %>

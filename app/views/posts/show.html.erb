@@ -1,34 +1,35 @@
+<p id="notice"><%= notice %></p>
+<div id='post_form'></div>
 <div id='posts'>
-  <p id="notice"><%= notice %></p>
-
-  <div id='post_form'>
-  </div>
-
-  <div class="post_header post">
-    <div id="post_<%=@post.id%>">
-	<%= link_to '<i class="fa fa-arrow-left"></i>'.html_safe, posts_path, id: 'back_to_posts_link' %>
-        <%= @post.title %>
-      <div class="icons">
-        <% if current_admin %> 
-          <%= link_to '<i class="fa fa-pencil-square-o"></i>'.html_safe, edit_post_path(@post), remote: true %>
-          <%= link_to '<i class="fa fa-times"></i>'.html_safe, @post, method: :delete, data: { confirm: 'Are you sure you want to delete this post?' }, remote: true %>
-        <% end %>
-      </div>
-    </div>
-  </div>
-  <%= image_tag @post.image_url(:large).to_s %>
-  <div class="post_content">
-    <p>		        
-      <%= @post.content %>
-    </p>
-  </div>
   <% unless @post.draft? %>
-    <div class="tags">
-      <%=raw tag_links(@post.all_tags)%>
-    </div>
+    <%= link_to '<i class="fa fa-arrow-left fa-lg"></i>'.html_safe, posts_path, id: 'back_to_posts_link', class: 'icon' %>
   <% else %>
-    <div class="tags">
-      <%= @post.all_tags %>
-    </div>
+    <%= link_to '<i class="fa fa-arrow-left fa-lg"></i>'.html_safe, drafts_posts_path, id: 'back_to_posts_link', class: 'icon' %>
   <% end %>
+
+  <% if current_admin %>
+    <%= link_to '<i class="fa fa-times fa-lg"></i>'.html_safe, @post, method: :delete, data: { confirm: 'Are you sure you want to delete this post?' }, id: 'delete_post_icon', class: 'icon' %> 
+    <%= link_to '<i class="fa fa-pencil-square-o fa-lg"></i>'.html_safe, edit_post_path(@post), remote: true, id: 'edit_post_icon', class: 'icon' %>
+  <% end %>
+
+  <div class="show_post">
+    <h3><%= @post.title %></h3>      
+    <div class="show_post_image">
+      <%= image_tag @post.image_url(:large).to_s %>
+    </div>
+    <div class="show_post_content">
+      <p>		        
+        <%= @post.content %>
+      </p>
+    </div>
+    <% unless @post.draft? %>
+      <div class="show_tags">
+        <%= raw tag_links(@post.all_tags) %>
+      </div>
+    <% else %>
+      <div class="show_draft_tags">
+        <%= @post.all_tags %>
+      </div>
+    <% end %>
+  </div>
 </div>

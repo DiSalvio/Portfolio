@@ -20,6 +20,7 @@ gem 'pg'
 gem 'rack-timeout'
 gem 'carrierwave'
 gem 'rmagick'
+gem 'file_validators'
 
 group :production do
   gem 'puma'

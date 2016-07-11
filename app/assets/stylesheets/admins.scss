@@ -2,9 +2,35 @@
   display: block;
   text-align: center;
 }
+
 .field,
 .actions {
   display: block;
   text-align: center;
   margin: 1% 0% 1% 0%;
+}
+
+.admin_actions {
+  display: block;
+  width: 60%;
+  margin: 0% 20%;
+  padding: 2%;
+}
+
+#admin_email {
+  width: 40%;
+  margin: 1% 30%;
+  padding: 1%;
+}
+
+#admin_password {
+  width: 40%;
+  margin: 1% 30%;
+  padding: 1%;
+}
+
+#log_in {
+  width: 40%;
+  margin: 1% 30%;
+  padding: 1%;
 }

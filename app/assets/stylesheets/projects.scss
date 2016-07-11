@@ -3,6 +3,13 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 #projects {
+  background-image: url(asset-path('symphony.png'));
+  background-repeat: repeat;
+  margin: 0;
+  border: 2.5px groove white;
+  width: 60%;
+  margin: 1% 20% 10% 20%;
+  padding: 2%;
   h2 a {
     text-decoration: none;
     color: black;
@@ -12,92 +19,84 @@
   }
 }
 
-.project_nav {
-  text-align: center;
-  #proj_header_left{
-    display: inline-block;
-    width: 30%;
-    padding: 5%;
-    #back_to_projects_link {
-      text-decoration: none;
-      color: black;
-    }
-  }
-  #proj_header_middle {
-    width: 40%;
-    padding: 5%;
-    .project_name {
-      font-size: 1em;
-      text-decoration: none;
-    }
-  }
-  #proj_header_right {
-    width: 20%;
-    padding: 5%;
-    float: right;
-    .icons {
-      vertical-align: top;
-    }
-  } 
-}
-
-.project {
+#no_projects {
+  border: 2px groove white;
   width: 60%;
-  padding: 5% 0%;
-  margin: 0% 20%;
-  border: 2.5px ridge whitesmoke;
+  padding: 2%;
+  margin: 1% 20%;
   text-align: center;
-  p {
-    margin: 5% 10%;
-    width: 80%;
-  }
-}
-
-.project_features {
-  margin: 2% 0%;
   h4 {
-      margin: 1% 15%;
-      width: 70%;
-      text-align: center;
-      text-decoration: underline;
+    text-align: center;
   }
-  ul { 
-    margin: 1% 20% 1% 30%;
-    width: 50%;
-  } 
 }
 
-.form-inputs {
-  display: block;
-}
-
-.form-actions {
-  display: block;
-  width: 25%;
-  margin: 1% 37.5%;
-  text-align: center;
+#project_form {
+  width: 60%;
+  margin: 1% 20%;
 }
 
 .project_name {
-  width: 20%;
-  margin: 1% 20%;
-  padding: 2%;
+  width: 50%;
+  padding: 1%;
+  margin: 5% 25% 1% 25%;
   #project_name {
     width: 100%;
   }
 }
 
 .project_description {
-  width: 25%;
-  margin: 1% 37.5%;
-  text-align: center;
+  width: 80%;
+  padding: 2%;
+  margin: 1% 10%;
   #project_description {
     width: 100%;
   }
 }
 
+.project_url {
+  width: 50%;
+  padding: 1%;
+  margin: 1% 25%;
+  #project_url { 
+    width: 100%;
+  }
+}
+
 .project_published {
-  width: 25%;
-  margin: 1% 37.5%;
+  width: 40%;
+  padding: 1%;
+  margin: 1% 30%;
+}
+
+#new_project,
+#projects_link,
+#project_drafts_link {
+  display: block;
   text-align: center;
 }
+
+#back_to_projects_link {
+  float: left;
+  text-align: center;
+  margin: 0% 1%;
+}
+
+#edit_project_icon,
+#delete_project_icon,
+#cancel_project {
+  float: right;
+  text-align: center;
+  margin: 0% 1%;
+}
+
+.show_project {
+  margin-top: 10%;
+  margin-bottom: 5%;
+}
+
+.show_project_description {
+  width: 80%;
+  padding: 2%;
+  margin: 0% 10%;
+}
+

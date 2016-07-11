@@ -11,7 +11,7 @@ class ProjectsController < ApplicationController
   end
 
   def new
-    @project = Project.new
+    @project = Project.new()
   end
 
   def edit
@@ -62,6 +62,14 @@ class ProjectsController < ApplicationController
     end
   end
 
+  def cancel
+    respond_to :js
+  end
+
+  def cancel_edit
+    respond_to :js
+  end
+
   private
   def set_admin
     @admin = Admin.first
@@ -72,14 +80,14 @@ class ProjectsController < ApplicationController
   end
 
   def get_projects
-    @projects = Project.published.order(created_at: :asc)
+    @projects = Project.published.latest
   end
  
   def get_drafts
-    @projects = Project.drafts.order(created_at: :asc)
+    @projects = Project.drafts.latest
   end
 
   def project_params
-    params[:project].permit(:id, :name, :description, :published)
+    params[:project].permit(:id, :name, :description, :url, :published)
   end
 end

@@ -3,7 +3,8 @@ class PostsController < ApplicationController
   before_action :set_admin
   before_action :get_posts, only: [:new, :create, :update]
   before_action :set_post, only: [:show, :edit, :update, :destroy]  
-  
+  after_action :set_post, only: :update
+
   def index
     if params[:tag]
       get_tagged_posts
@@ -67,6 +68,14 @@ class PostsController < ApplicationController
     end
   end
 
+  def cancel
+    respond_to :js
+  end
+
+  def cancel_edit
+    respond_to :js
+  end
+
   private
     def set_post
       @post = Post.find(params[:id])
@@ -77,11 +86,11 @@ class PostsController < ApplicationController
     end
 
     def get_posts
-      @posts = Post.published.order(updated_at: :desc)
+      @posts = Post.published.latest
     end
  
     def get_drafts
-      @posts = Post.drafts.order(updated_at: :desc)
+      @posts = Post.drafts.latest
     end
 
     def set_admin

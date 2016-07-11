@@ -4,7 +4,7 @@ $("ul.errors").html("")
     $("ul.errors").append($("<li />").html("<%= message.html_safe %>"))
   <% end %>
 <% else %>
-  $('#new_post').slideDown(350);
-  $('#post_form').html("").insertAfter('#new_post');
-  $('#post_<%= @post.id %>').html('<%= j (render @post) %>').show();
+  $('#post_form').html("").hide();
+  $('#posts').show();
+  $('.post').html('<%= j (render @post) %>').show();
 <% end %>
