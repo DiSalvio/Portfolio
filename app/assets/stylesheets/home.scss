@@ -38,7 +38,7 @@ $translucent-white: rgba(255, 255, 255, 0.5);
       text-align: left;
       margin: 1%;
       padding: 1%;
-      font-size: 0.85em;
+      font-size: 0.7em !important;
     }
     ul {
       text-align: left;
@@ -46,7 +46,7 @@ $translucent-white: rgba(255, 255, 255, 0.5);
       margin: 1% 5%;
       padding: 1%;
       li {
-        font-size: 0.85em;
+        font-size: 0.7em !important;
         font-family: 'Source Code Pro', sans-serif !important;
       }
     }
@@ -61,6 +61,7 @@ $translucent-white: rgba(255, 255, 255, 0.5);
     text-align: center;
   }
   p {
+    font-size: 0.9em;
     width: 85%;
     margin: 1% 7%;
   }
