@@ -1,43 +1,65 @@
 // Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-#header,
+@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro);
+
+$translucent-white: rgba(255, 255, 255, 0.5);
+
 .tools,
 .about_me,
 .projects {
-  width: 70% !important;
-  margin-left: 15% !important;
-  margin-right: 15% !important;
-  padding: 1% !important;
+  width: 70%;
+  margin-left: 15%;
+  margin-right: 15%;
+  padding: 1%;
   background-image: url(asset-path('symphony.png'));
   background-repeat: repeat;
-  margin: 0; 
 }
 
 .tools {
-  height: 33%;
+  background: $translucent-white;
   border-right: 2.5px ridge white; 
   border-left: 2.5px ridge white;  
+  border-top: 2.5px ridge white; 
+  #tools_content {
+    width: 95%;
+    margin-left: 5%;
+    padding: 1%;
+  }
+  h2 {
+    padding: 1%;
+  }
   #dev_tools,
   #testing_tools,
   #research {
+    padding: 1% 5%;
     h4 {
+      font-family: 'Source Code Pro', sans-serif !important;
       text-align: left;
-      margin: 5% 5% 5% 35%;
+      margin: 1%;
+      padding: 1%;
+      font-size: 0.85em;
     }
     ul {
       text-align: left;
-      margin: 0% 5% 0% 35%; 
+      list-style-type: none;
+      margin: 1% 5%;
+      padding: 1%;
+      li {
+        font-size: 0.85em;
+        font-family: 'Source Code Pro', sans-serif !important;
+      }
     }
   }
 }
 
 .about_me {
-  height: 45%;
-  text-align: center;
-  border-top: 2.5px ridge white; 
-  border-right: 2.5px ridge white; 
-  border-left: 2.5px ridge white;  
+  background: $translucent-white;
+  border: 2.5px ridge white; 
+  margin-bottom: 10%;
+  h2 {
+    text-align: center;
+  }
   p {
     width: 85%;
     margin: 1% 7%;
@@ -48,8 +70,8 @@
   position: fixed;
   bottom: 0;
   border-top: 2.5px ridge white;
-  border-right: 2.5px groove whitesmoke;
-  border-left: 2.5px groove whitesmoke;
+  border-right: 2.5px ridge white;
+  border-left: 2.5px ridge white;
   h2 {
     text-align: right;
     display: inline-flex;
@@ -60,19 +82,33 @@
     text-decoration: none;
     color: black;
   }
-  a:hover {
-   text-decoration: underline;
-  }
   ul {
     list-style-type: none;
-    margin: 0.65em 0 0 4em;
-    padding: 0;
+    padding: 1%;
     display: inline;
     li {
       display: inline;
       list-style-type: none;
-      margin: .25em 4em;
-      padding: .5em 1em;
+      margin: 1% 5%;
+      padding: 1%;
     }
   }
+}
+.home_header_buffer {
+  padding: 8%;
+}
+.gem {
+  color: red;
+  font-family: 'Source Code Pro', sans-serif !important;
+}
+.sym {
+  color: red;
+  font-family: 'Source Code Pro', sans-serif !important;
+}
+.do_end {
+  color: blue;
+  font-family: 'Source Code Pro', sans-serif !important;
+}
+.comp_font {
+  font-family: 'Source Code Pro', sans-serif !important;
 }

@@ -1,55 +1,62 @@
-<div class="tools col-1-1">
+<div class="home_header_buffer"></div>
+<div id="home">
+  <div class="tools col-1-1">
   
-  <h2>Favorite Tools</h2>
-  
-  <div id="dev_tools" class="col-1-3"> 
-  <h4>Development tools</h4>
-    <ul>
-      <li>Ruby on Rails</li>
-      <li>jQuery</li>
-      <li>Postgresql</li>
-      <li>Git</li>
-      <li>SCSS</li>
-    </ul>
+    <h2><span class="sym">./Portfolio/Gemfile<span></h2>
+    <div id="tools_content">  
+      <div id="dev_tools" class="col-1-3"> 
+      <h4>group <span class="sym">:development<span> <span class="do_end">do</span></h4>
+        <ul>
+          <li><span class="gem">ruby</span> '2.3'</li>
+          <li><span class="gem">gem</span> 'rails'</li>
+	  <li><span class="gem">gem</span> 'pg'</li> 
+          <li><span class="gem">gem</span> 'sass-rails'</li>
+          <li><span class="gem">gem</span> 'jquery-rails'</li>
+          <li><span class="gem">gem</span> 'devise'</li>
+	  <li><span class="gem">gem</span> 'simple_form'</li>
+        </ul>
+        <h4><span class="do_end">end</span></h4>
+      </div>
+
+      <div id="testing_tools" class="col-1-3">
+        <h4>group <span class="sym">:test</span> <span class="do_end">do</span></h4>
+        <ul>
+          <li><span class="gem">gem</span> 'cucumber'</li>
+          <li><span class="gem">gem</span> 'rspec'</li>
+          <li><span class="gem">gem</span> 'page-object'</li>
+          <li><span class="gem">gem</span> 'capybara'</li>
+          <li><span class="gem">gem</span> 'selenium'</li>
+          <li><span class="gem">gem</span> 'pry'</li>
+        </ul>
+        <h4><span class="do_end">end</span></h4>
+      </div>
+
+      <div id="research" class="col-1-3">
+        <h4>group <span class="sym">:production</span> <span class="do_end">do</span></h4> 
+        <ul>
+          <li><span class="gem">gem</span> 'bootstrap'</li>
+          <li><span class="gem">gem</span> 'carrierwave'</li>
+          <li><span class="gem">gem</span> 'puma'</li>
+          <li><span class="gem">gem</span> 'heroku'</li>
+        </ul>
+        <h4><span class="do_end">end</span></h4>
+      </div>
+    </div>
   </div>
 
-  <div id="testing_tools" class="col-1-3">
-    <h4>Testing tools</h4>
-    <ul>
-      <li>Ruby</li>
-      <li>Cucumber</li>
-      <li>Page-Object</li>
-      <li>Capybara</li>
-      <li>Watir</li>
-      <li>SQL</li>
-    </ul>
+  <div class="about_me col-1-1">
+    <h2>About Me</h2>
+      <p>I started learning Ruby on Rails in November of 2014. From the beginning my main inspiration and objective has been to develop a free web application that gives users the tools to create a page with customized layout and design. Anticipated users are artists, musicians, photographers, and other creative people who desire the ability to design and edit their own webpage to reflect their work. This, my portfolio page, is the first step to making my vision into a reality. Through working on this site, other coding projects, exercises, and tutorials I have learned many web technologies and gained valuable experience building and deploying web apps. In addition, I've learned important development concepts by also reading books on web development and taking an online Agile development course with Ruby on Rails offered by Cal-Berkley. I have 2+ years experience testing software with millions of users, and built test automation tools using Cucumber, Ruby and the Page Object gem to facilitate this work. My current objective is to join an innovative and exciting software company as a Rails developer.
+    </p>
+    <p>When I'm not developing web apps, I enjoy playing, composing, producing, and mixing music, reading, writing, cooking, backpacking, playing basketball in the winter, and ultimate frisbee in the summer. I was born and raised in New Jersey, earned my B.S. in Biomedical Engineering from Case Western Reserve University and currently reside in Cleveland, Ohio.
+    </p>
   </div>
-
-  <div id="research" class="col-1-3">
-    <h4>Research</h4> 
-    <ul>
-      <li>Bootstrap</li>
-      <li>Simple Grid</li>
-      <li>Angular JS</li>
-      <li>React.js</li>
-    </ul>
-  </div>
-
 </div>
-
-<div class="about_me col-1-1">
-  <h2>About Me</h2>
-    <p>Since graduating from Case Western Reserve University with a B.S. in May 2014 my main focus has been teaching myself web technologies. After researching different web development frameworks I found Ruby on Rails in November of 2014 and have dedicated myself to learning Rails and associated technologies ever since. My main inspiration and objective is to develop a performant, inexpensive web application with entirely customizable layout and design. These tools will empower artists, musicians, photographers, and others with the ability to design and edit their own webpage so it can be customized to reflect their work. Since diving headfirst into Rails, I have worked on a number of less ambitious projects to familiarize myself with different technologies and design patterns.   
-  </p>
-  <p>When I'm not developing web apps, I enjoy learning to play musical instruments (currently learning bass guitar and piano), composing, producing, and mixing music, reading nonfiction, creative writing (I won an award for best poem in the year I graduated), cooking, hiking, playing basketball in the winter, and ultimate frisbee in the summer.
-  </p>
-</div>
-
 <div class="projects">
-  <h2><%= link_to "Projects:", projects_path %></h2>
+  <h2><%= link_to "Projects:", projects_path, class: 'link' %></h2>
   <ul id="project_names">
   <% @project_names.each do |p| %>
-    <li><%= link_to "#{p}", project_path(p) %></li>
+    <li><%= link_to "#{p}", project_path(p), class: 'link' %></li>
   <% end %>
   </ul>
 </div>

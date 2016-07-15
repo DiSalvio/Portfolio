@@ -1,9 +1,12 @@
 #header {
   width: 70%;
-  margin: 0 14% 0 14%;
-  height: 15%;
+  margin: 0% 15%;
   padding: 1%;
+  background-image: url(asset-path('symphony.png'));
+  background-repeat: repeat;
   display: inline-block;
+  position: fixed;
+  top: 0;
   border-bottom: 2.5px ridge white; 
   border-right: 2.5px ridge whitesmoke;
   border-left: 2.5px ridge whitesmoke;
@@ -12,85 +15,40 @@
   }
 
   #header_left {
-    width: 25%;
-    height: 100%;
-    float: left;
+    width: 20%;
+    padding: 1%;
     display: inline-block;
     img {
-      margin-left: 20%;
-      padding: 5%;
+      padding: 2%;
       vertical-align: middle;
     }
   }
 
   
   #header_middle {
-    width: 50%;
-    height: 100%;
+    width: 55%;
+    padding: 1%;
     text-align: center;
     display: inline-block;
-    margin: 0 0;
-
-      h1 {
-        height: 40%;
-      }
-  
-      #email,
-      #phone_number,
-      #github {
-        display: inline-block;
-        width: 70%;
-        height: 20%;
-        text-align: center;
-      }
-      #email {
-        width: 100%;
-      }
+    #email,
+    #github {
+      display: block;
+      text-align: center;
     }
+  }
 
 
   #header_right {
-    width: 25%;
-    height: 100%;
-    display: inline-block;
+    width: 20%;
     float: right;
-
-    
-    #blog_link {
+    padding: 1%;
+    display: inline-block;
+    a {
+      width: 50%;
+      margin: 15% 25%;
+      padding: 2%;
       text-align: center;
-      display: inline-block;
-      width: 100%;
-      height: 50%;
-      padding: 1%;
-      margin: 15% 0% 15% 0%;
-      a {
-	height: 100%;
-        margin: 10% 1%;
-        text-decoration: none;
-        font-size: 22px;
-	color: black;
-      }
-    }  
-    #blog_link a:hover {
-      text-decoration: underline;
-    }
-
-    #portfolio {
-      width: 100%;
-      height: 50%;
-      padding: 1%;
-      margin: 15% 0% 15% 0%;
-      a {
-        width: 100%;
-	height: 70%;
-        text-decoration: none;
-        font-size: 22px;
-        color: black;
-      }
-      a:hover {
-      text-decoration: underline;
-      color: grey;
-      }
+      font-size: 22px;
     }
   }
 }

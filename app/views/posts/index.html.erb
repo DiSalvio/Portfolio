@@ -1,5 +1,5 @@
+<div class="big_header_buffer"></div>
 <p id="notice"><%= notice %></p>
-
 <% if current_admin %>
   <div class="admin_actions">
     <%= link_to 'Drafts <i class="fa fa-arrow-right fa-lg"></i>'.html_safe, drafts_posts_path, id: 'post_drafts_link', class: 'button nav_button' %>
@@ -13,12 +13,12 @@
   <div id="posts">
     <%= render partial: 'post', collection: @posts, as: :post %>
   </div>
-
+  <div class="footer_buffer"></div>
   <div class="tag_list">
     <h3>Tags:</h3>
     <ul id="tag_list">
       <% tag_list(Tag.counts) do |tag| %>
-        <li class="tag"><%= link_to tag.name, tag_path(tag.name), id: 'tag_link' %></li>
+        <li class="tag"><%= link_to tag.name, tag_path(tag.name), id: 'tag_link', class: 'link' %></li>
       <% end %>
     </ul>
   </div>

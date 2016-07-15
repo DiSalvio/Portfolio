@@ -1,14 +1,15 @@
 // Place all the styles related to the project controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$white: rgba(255, 255, 255, 0.5);
 
 #projects {
   background-image: url(asset-path('symphony.png'));
   background-repeat: repeat;
-  margin: 0;
+  background: $white;
   border: 2.5px groove white;
   width: 60%;
-  margin: 1% 20% 10% 20%;
+  margin: 0% 20%;
   padding: 2%;
   h2 a {
     text-decoration: none;
@@ -66,6 +67,11 @@
   width: 40%;
   padding: 1%;
   margin: 1% 30%;
+  #project_published {
+    padding: 1%;
+    margin: 2%;
+    vertical-align: text-top;
+  }
 }
 
 #new_project,
@@ -77,6 +83,7 @@
 
 #back_to_projects_link {
   float: left;
+  position: absolute;
   text-align: center;
   margin: 0% 1%;
 }
@@ -86,12 +93,12 @@
 #cancel_project {
   float: right;
   text-align: center;
-  margin: 0% 1%;
+  margin: 0%;
 }
 
 .show_project {
-  margin-top: 10%;
-  margin-bottom: 5%;
+  margin-top: 1%;
+  margin-bottom: 1%;
 }
 
 .show_project_description {

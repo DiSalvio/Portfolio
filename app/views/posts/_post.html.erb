@@ -1,7 +1,7 @@
 <div id="post_<%=post.id%>" class="post">
-  <h2><%= link_to "#{post.title}", post %></h2>
+  <h2><%= link_to "#{post.title}", post, class: 'link' %></h2>
   
-  <div class="post_image">
+  <div class="show_post_image">
     <%= image_tag post.image_url(:medium).to_s %>
   </div>
 
@@ -11,7 +11,7 @@
     </p>
   </div>
 
-  <div class="tags">
+  <div class="show_tags">
     <%=raw tag_links(post.all_tags)%>
   </div>
 </div>

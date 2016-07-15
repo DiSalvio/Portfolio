@@ -1,19 +1,4 @@
 @media (max-width: 1028px) {
-  .tools {
-    li {
-      font-size: 1.25em !important;
-    }
-  }
-  .about_me {
-    p {
-      font-size: 1em;
-    }
-  }
-  .projects {
-    li {
-      font-size: 1.25em !important;
-    }
-  }
 }
 
 @media (max-width: 767px) {
@@ -22,68 +7,79 @@
   .about_me,
   .projects {
     width: 80% !important;
-    margin: 1% 9% !important;
-    padding: 1% !important;
+    margin-left: 10% !important;
+    margin-right: 10% !important;
   }
-  #show_blog_post_container,
-  #blog_posts,
-  #project_info_container {
+  #posts,
+  #projects {
     width: 80% !important;
-    margin: 1% 10% !important;
+    margin-left: 10% !important;
+    margin-right: 10% !important;
   }
-  .tools {
-    height: 40% !important;
+  h1 {
+    font-size: 1.35em;
+  }
+  h4 {
+    font-size: 1em;
+  }
+  #github,
+  #email {
+    font-size: 1em;
   }
 }
 
 @media (max-width: 425px) {
   #header,
-  #show_blog_post_container,
-  #blog_posts,
-  #project_info_container {
-    width: 95% !important;
-    margin: 1% 1.5% !important;
+  .tools,
+  .about_me,
+  .projects {
+    width: 90% !important;
+    margin-left: 5% !important;
+    margin-right: 5% !important;
   }
-  #project_info_container ul {
-      margin-left: 15% !important;
+  #projects,
+  #posts {
+    width: 90%;
+    margin-left: 5% !important;
+    margin-right: 5% !important;
   }
-
   h1 {
     font-size: 1.5em;
   }
   h2 {
     font-size: 1.25em;
   }
+  h4 {
+    font-size: 0.85em;
+  }
   .tools li {
     font-size: 1em !important;
   }
   #header_middle a, span {
-      font-size: 1em !important;
+    font-size: 1em !important;
   }
-  .about_me {
-    margin-bottom: 0.5%;
-    p {
-      /*font-size: 1em !important;*/
-    }
-  }
-  .projects {
-    height: 20% !important;
-    ul {
-      margin: 1% 0% !important;
-      width: 70% !important;
-    }
-    h4 {
-      margin: 1% 25% 1% 0%  !important;
-      width: 75% !important;
-      padding-left: 0% !important;
-      text-align: center;
-    }
+  .about_me p {
+    font-size: 0.85em !important;
   }
 }
 
 @media (max-width: 375px) {
+  #header,
+  .tools,
+  .about_me,
+  .projects {
+    width: 95% !important;
+    margin-left: 2.5% !important;
+    margin-right: 2.5% !important;
+  }
+  #posts,
+  #projects {
+    width: 95%;
+    margin-left: 2.5% !important;
+    margin-right: 2.5% !important;
+  }
   h1 {
-    font-size: 1.35em;
+    font-size: 1.25em;
   }
   h4 {
     font-size: 0.75em;
@@ -91,18 +87,10 @@
   .tools li {
     font-size: 0.85em;
   }
-  #project_info_container  ul {
-      margin-left: 5% !important;
-  }
-  
-  .about_me {
-    height: 42.5% !important;
-    p {
-	font-size: 0.85em !important;
-    }
+  .about_me p {
+    font-size: 0.75em !important;
   }
 }
 
 @media (max-width: 325px) {
-
 }
