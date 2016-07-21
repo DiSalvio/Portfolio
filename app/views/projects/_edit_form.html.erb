@@ -6,7 +6,7 @@
 
   <div class="form-inputs">
     <%= p.input :name, id: 'form_project_name', label: false, placeholder: 'Project name' %>
-    <%= p.input :description, as: :text, id: 'form_project_description', label: false, placeholder: 'Project description' %>
+    <%= p.trix_editor :description, as: :text, id: 'form_project_description', label: false, placeholder: 'Project description' %>
     <%= p.input :url, id: 'form_project_url', label: false, placeholder: 'URL' %>
     <%= p.input :published, id: 'form_project_published', label: 'Publish project info?' %>
   </div>

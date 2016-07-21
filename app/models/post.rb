@@ -33,4 +33,5 @@ class Post < ActiveRecord::Base
   def draft?
     self.published == false
   end
+
 end

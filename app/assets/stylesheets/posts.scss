@@ -8,9 +8,7 @@ $white: rgba(255, 255, 255, 0.5);
   background-repeat: repeat;
   background: $white;
   border: 2.5px groove white;
-  width: 60%;
-  margin: 0% 20%;
-  padding: 2%;
+  padding: 1%;
   h2 a {
     text-align: center;
     text-decoration: none;
@@ -24,7 +22,7 @@ $white: rgba(255, 255, 255, 0.5);
 .no_posts {
   border: 2px groove white;
   width: 60%;
-  padding: 2%;
+  padding: 1%;
   margin: 1% 20%;
   h4 {
     text-align: center;
@@ -32,13 +30,13 @@ $white: rgba(255, 255, 255, 0.5);
 }
 
 .post {
-  padding: 3%;
+  padding: 1%;
   border-bottom: 2.5px ridge white;
 }
 
 .show_post {
-  margin: 1% 0%;
-  padding: 3%;
+  margin: 0%;
+  padding: 2%;
 }
 
 #edit_post_icon,
@@ -60,7 +58,7 @@ $white: rgba(255, 255, 255, 0.5);
   float: left;
   position: absolute;
   text-align: center;
-  margin: 0% 1%;
+  margin: 0%;
 }
 
 #post_form {
@@ -73,6 +71,12 @@ $white: rgba(255, 255, 255, 0.5);
   width: 50%;
   margin: 1% 25%;
   #post_title {
+    background: $white;
+    padding: 1%;
+    border: 1px solid #bbb;
+    border-radius: 3px;
+    outline: none;
+    min-height: 35px;
     width: 100%;
   }
 }
@@ -92,11 +96,17 @@ $white: rgba(255, 255, 255, 0.5);
 
 #post_form_tags {
   width: 50%;
+  background: $white;
+  border: 1px solid #bbb;
+  border-radius: 3px;
+  outline: none;
   padding: 1%;
   margin: 1% 25%;
+  min-height: 35px;
 }
 
 #post_upload {
+  background: $white;
   display: block;
   width: 50%;
   padding: 1%;
@@ -123,6 +133,10 @@ $white: rgba(255, 255, 255, 0.5);
 
 .show_post_image {
   text-align: center;
+}
+
+.tag {
+  background: $white;
 }
 
 .show_tags,

@@ -1,3 +1,5 @@
+$white: rgba(255, 255, 255, 0.5);
+
 h1,
 h2,
 h3,
@@ -15,7 +17,8 @@ li,
 a,
 span,
 input,
-label {
+label,
+div {
   font-family: 'Nunito', sans-serif !important;
   font-weight: 300 !important;
   line-height: 1.5 !important;
@@ -95,8 +98,8 @@ input[type="checkbox" i] {
 .errors {
   color: red;
   list-style: none;
+  padding: 0%;
   width: 50%;
-  padding: 1%;
   margin: 1% 25%;
   li {
     text-align: center;
@@ -137,3 +140,14 @@ input[type="checkbox" i] {
 .big_header_buffer {
   padding: 7%;
 }
+
+.button_groups {
+  text-align: center;
+}
+
+.formatted_content {
+  background: $white;
+  text-align: left;
+  margin: 1%;
+}
+

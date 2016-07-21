@@ -21,6 +21,7 @@ gem 'rack-timeout'
 gem 'carrierwave'
 gem 'rmagick'
 gem 'file_validators'
+gem 'trix'
 
 group :production do
   gem 'puma'

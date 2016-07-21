@@ -20,7 +20,7 @@
     </div>
     <div class="show_post_content">
       <p>		        
-        <%= @post.content %>
+        <%= @post.content.html_safe %>
       </p>
     </div>
     <% unless @post.draft? %>

@@ -23,7 +23,7 @@
       <% end %>	
     </h3>
     <div class="show_project_description">
-      <p><%= @project.description %></p>
+      <p><%= @project.description.html_safe %></p>
     </div>
   </div>
 </div>

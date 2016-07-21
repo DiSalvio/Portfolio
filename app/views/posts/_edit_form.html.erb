@@ -6,7 +6,7 @@
 
   <div class="form-inputs">
     <%= f.input :title, id: 'post_form_title', label: false, placeholder: 'Title' %>
-    <%= f.input :content, as: :text, id: 'post_form_content', label: false, placeholder: 'Content' %>
+    <%= f.trix_editor :content, as: :text, id: 'post_form_content', label: false, placeholder: 'Content' %>
     <%= f.text_field :all_tags, placeholder: "Tags separated by commas", id: 'post_form_tags' %>
     <%= f.file_field :image, id: 'post_upload' %>
     <%= f.input :published, id: 'post_published', label: ' Publish post?' %> 

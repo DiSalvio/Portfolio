@@ -8,9 +8,7 @@ $white: rgba(255, 255, 255, 0.5);
   background-repeat: repeat;
   background: $white;
   border: 2.5px groove white;
-  width: 60%;
-  margin: 0% 20%;
-  padding: 2%;
+  padding: 1%;
   h2 a {
     text-decoration: none;
     color: black;
@@ -23,7 +21,7 @@ $white: rgba(255, 255, 255, 0.5);
 #no_projects {
   border: 2px groove white;
   width: 60%;
-  padding: 2%;
+  padding: 1%;
   margin: 1% 20%;
   text-align: center;
   h4 {
@@ -41,13 +39,19 @@ $white: rgba(255, 255, 255, 0.5);
   padding: 1%;
   margin: 5% 25% 1% 25%;
   #project_name {
+    background: $white;
+    padding: 1%;
+    border: 1px solid #bbb;
+    border-radius: 3px;
+    outline: none;
+    min-height: 35px;
     width: 100%;
   }
 }
 
 .project_description {
   width: 80%;
-  padding: 2%;
+  padding: 1%;
   margin: 1% 10%;
   #project_description {
     width: 100%;
@@ -59,6 +63,12 @@ $white: rgba(255, 255, 255, 0.5);
   padding: 1%;
   margin: 1% 25%;
   #project_url { 
+    background: $white;
+    padding: 1%;
+    border: 1px solid #bbb;
+    border-radius: 3px;
+    outline: none;
+    min-height: 35px;
     width: 100%;
   }
 }
@@ -85,7 +95,7 @@ $white: rgba(255, 255, 255, 0.5);
   float: left;
   position: absolute;
   text-align: center;
-  margin: 0% 1%;
+  margin: 0%;
 }
 
 #edit_project_icon,
@@ -93,17 +103,12 @@ $white: rgba(255, 255, 255, 0.5);
 #cancel_project {
   float: right;
   text-align: center;
-  margin: 0%;
-}
-
-.show_project {
-  margin-top: 1%;
-  margin-bottom: 1%;
+  margin: 0% 1%;
 }
 
 .show_project_description {
   width: 80%;
-  padding: 2%;
+  padding: 1%;
   margin: 0% 10%;
 }
 
