@@ -15,9 +15,8 @@ $translucent-white: rgba(255, 255, 255, 0.5);
 
 .tools {
   background: $translucent-white;
-  border-right: 2.5px ridge white; 
-  border-left: 2.5px ridge white;  
-  border-top: 2.5px ridge white; 
+  margin-bottom: 10%;
+  border: 2.5px ridge white; 
   #tools_content {
     width: 95%;
     margin-left: 5%;
@@ -52,8 +51,9 @@ $translucent-white: rgba(255, 255, 255, 0.5);
 
 .about_me {
   background: $translucent-white;
-  border: 2.5px ridge white; 
-  margin-bottom: 10%;
+  border-right: 2.5px ridge white; 
+  border-left: 2.5px ridge white;  
+  border-top: 2.5px ridge white; 
   h2 {
     text-align: center;
   }
