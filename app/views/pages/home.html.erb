@@ -1,11 +1,10 @@
-<div class="home_header_buffer"></div>
 <div id="home">
 
   <div class="about_me col-1-1">
     <h2>About Me</h2>
-      <p>    My initial inspiration to learn web development in my senior year at college was to build a customized multimedia blog for myself, so I could post my poetry, music, photography, and other projects. Since then, I have built and improved this Portfolio site, used Ruby, Python, and JavaScript in a professional setting, and incorporated a multitude of other tools in my work. Through working on this site, and many other side projects I have gained valuable experience incorporating different technologies to build and deploy web applications. In addition, I've learned important development concepts from reading books on web development, working through many exercises and tutorials, automating test suites, and contirbuting to design discussions on testing and rollout of code changes. In 4 years testing software professionally, I've developed countless browser tests using Ruby, Cucumber, Watir, RSpec, and Page Object. I've also written many bash scripts, developed a custom automation framework in Python, authored many API tests with Jasmine/Karma and Postman/newman, identified bugs, even fixed a few bugs on an AngularJs frontend, written testing and deployment pipelines using Jenkins job DSL, the list goes on. Read my coding blog to learn more about my unique experiences in the world of engineering quality code integration and deployment systems.
+      <p>    I first was introduced to programming in my freshman year of college, my first programming language was Java. In the following years I learned to use MATLAB for a variety of projects and assignments. In my senior year I was a teaching assistant for the intro to MATLAB course. That same year, I was inspired to learn web development because I wanted to build a customized multimedia blog for myself, so I could post my coding projects, poetry, music, and other creative works and ideas. Since then, I have built and improved this Portfolio site, used Ruby, Python, and JavaScript in a professional setting, and incorporated a multitude of other tools in my work. Through working on this site, and many other side projects, I have gained valuable experience incorporating different technologies to build and deploy web applications. In addition, I've learned important development concepts from reading books on web development, working through many exercises and tutorials, automating test suites, and contributing to design discussions on testing and rollout of code changes. In 4 years writing software professionally, I've developed countless browser tests using Ruby, Cucumber, Watir, RSpec, and Page Object. I've also written many bash scripts, developed a custom automation framework in Python, authored many API tests with Jasmine/Karma and Postman/newman, identified bugs, even fixed a few bugs on an AngularJs frontend, written testing and deployment pipelines using Jenkins job DSL, the list goes on. Read my coding blog to learn more about my unique experiences in the world of engineering quality code integration and deployment systems. In 2019 I started volunteering at the Columbus Literacy Council, teaching immigrants English as a second language, this experience led me to pursue an English teaching position in Chengdu, China - where I have lived for the past year.
     </p>
-    <p>    When I'm not coding, I enjoy playing, composing, producing, and mixing music, reading, writing, cooking, backpacking, playing basketball in the winter, and ultimate frisbee in the summer. I was born and raised in New Jersey, earned my B.S. in Biomedical Engineering with an English minor from Case Western Reserve University and currently reside in Columbus, Ohio. I recently earned a 120-hour Teaching English as a Foreign Language certificate from TEFL.org, and am pursuing English teaching jobs in or around Chengdu, China.
+    <p>    When I'm not teaching English or coding, I enjoy playing, composing, producing, and mixing music, reading, writing, practicing my Chinese and Spanish, cooking, backpacking, playing basketball and ultimate frisbee. I was born and raised in New Jersey, earned my B.S. in Biomedical Engineering with an English minor from Case Western Reserve University and currently reside in Chengdu, China. Last year earned a 120-hour Teaching English as a Foreign Language certificate from TEFL.org. I've enjoyed my first year living in Chengdu so much, and am currently pursuing my second English teaching position in or around Chengdu, China.
     </p>
   </div>
   
@@ -59,12 +58,12 @@
     </div>
   </div>
 
-</div>
-<div class="projects">
-  <h2><%= link_to "Projects:", projects_path, class: 'link' %></h2>
-  <ul id="project_names">
-  <% @project_names.each do |p| %>
-    <li><%= link_to "#{p}", project_path(p), class: 'link' %></li>
-  <% end %>
-  </ul>
+  <div class="projects">
+    <h2><%= link_to "Projects:", projects_path, class: 'link' %></h2>
+    <ul id="project_names">
+    <% @project_names.each do |p| %>
+      <li><%= link_to "#{p}", project_path(p), class: 'link' %></li>
+    <% end %>
+    </ul>
+  </div>
 </div>

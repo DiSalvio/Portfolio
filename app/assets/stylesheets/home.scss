@@ -15,7 +15,6 @@ $translucent-white: rgba(255, 255, 255, 0.5);
 
 .tools {
   background: $translucent-white;
-  margin-bottom: 10%;
   border: 2.5px ridge white; 
   #tools_content {
     width: 95%;
@@ -64,8 +63,6 @@ $translucent-white: rgba(255, 255, 255, 0.5);
 }
 
 .projects {
-  position: fixed;
-  bottom: 0;
   border-top: 2.5px ridge white;
   border-right: 2.5px ridge white;
   border-left: 2.5px ridge white;
